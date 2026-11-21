@@ -119,8 +119,8 @@ As **pausadas** são fontes que o projeto puxa quando um item pede: não entram 
 | T19 | Full Cycle 4.0 (catálogo) | catálogo de cursos | pausada |
 | T20 | Tech Leads Club | curso | ativa |
 | **T21** | **Livro: Fundamentos da Arquitetura de Software** (Richards e Ford, 2ª ed.) | livro | pausada · *sumário de memória, conferir* |
-| **T22** | **Livro: Projetando Aplicações com Uso Intensivo de Dados** (Kleppmann) | livro | pausada |
-| **T23** | **Livro: Aprendendo Domain-Driven Design** (Khononov) | livro | pausada |
+| **T22** | **Livro: Projetando Aplicações com Uso Intensivo de Dados** (Kleppmann e Riccomini, 2ª ed.) | livro | pausada |
+| **T23** | **Livro: Aprenda Domain-Driven Design** (Khononov) | livro | pausada |
 | T24 | Go Expert (Full Cycle) | curso | pausada |
 | T25 | Formação DevOps Pro | curso | pausada |
 | T26 | Algoritmos e estruturas de dados (Elemar Jr) | curso | pausada |
@@ -156,13 +156,13 @@ A arquitetura existe desde o dia 1. Ela **evolui por pressão**: cada estágio a
 | **A0 · Domínio puro** | Fase 0 | Um módulo Go, só domínio e testes. Sem HTTP, sem banco. Decisão consciente: "começar simples" (ADR 1) | Precisamos de HTTP e de persistência | Testes de propriedade (a soma global é zero) | T23 cap. 1, 2, 5 e 6 · T21 cap. 1, 2 e 21 |
 | **A1 · Camadas → hexagonal** | 1.1 a 1.3 | HTTP e Postgres entram como adaptadores; o domínio não sabe deles | Trocar memória por Postgres sem tocar no domínio (a dor das camadas acopladas aparece em 1.1) | Linter de imports: domínio não importa infra (1.2) | T21 cap. 3, 10 · T23 cap. 8 · T29 › Hexagonal e Clean |
 | **A2 · Monólito modular** | 3.1 | Contas, Razão e PIX viram módulos com fronteiras e um context map | O PIX traz outro contexto com outra linguagem | Módulo só fala com outro pela API pública dele | T21 cap. 8, 11 · T23 cap. 3, 4, 12 |
-| **A3 · Distribuído por fronteira de organização** | 3.2 a 3.7 | O SPI é outra "empresa": rede, sagas, outbox, idempotência | Dois bancos precisam trocar dinheiro sem transação comum | Teste de caos + conciliação fechando no zero | T21 cap. 9 (falácias) · T22 cap. 8 e 9 · T23 cap. 9 |
-| **A4 · Primeira extração** | 4.1 a 4.4 | CQRS no extrato; a antifraude sai do monólito por motivo (escala e isolamento de falha) | Perfil de recurso diferente; uma falha não pode travar o PIX | Antifraude fora do ar não impede PIX | T21 cap. 7 (quanta), 14, 18, 19 · T23 cap. 11, 14 · T22 cap. 11 |
-| **A5 · Plataforma** | Fase 5 | A Nuvem: agentes por nó, plano de controle, loop de reconciliação (microsserviços por natureza) | Apps precisam de banco, fila, segredos e vários nós | Apagou na mão, a Nuvem recria | T21 cap. 15 · T22 cap. 5 |
+| **A3 · Distribuído por fronteira de organização** | 3.2 a 3.7 | O SPI é outra "empresa": rede, sagas, outbox, idempotência | Dois bancos precisam trocar dinheiro sem transação comum | Teste de caos + conciliação fechando no zero | T21 cap. 9 (falácias) · T22 cap. 9 e 10 · T23 cap. 9 |
+| **A4 · Primeira extração** | 4.1 a 4.4 | CQRS no extrato; a antifraude sai do monólito por motivo (escala e isolamento de falha) | Perfil de recurso diferente; uma falha não pode travar o PIX | Antifraude fora do ar não impede PIX | T21 cap. 7 (quanta), 14, 18, 19 · T23 cap. 11, 14 · T22 cap. 12 |
+| **A5 · Plataforma** | Fase 5 | A Nuvem: agentes por nó, plano de controle, loop de reconciliação (microsserviços por natureza) | Apps precisam de banco, fila, segredos e vários nós | Apagou na mão, a Nuvem recria | T21 cap. 15 · T22 cap. 6 |
 | **A6 · Kubernetes** | 5.8 | A mesma plataforma, agora no orquestrador da indústria, para comparar com a sua | Saber o que o K8s resolve que a sua Nuvem não resolve (e o custo disso) | Derrubar um nó do cluster sem perder o Banco | T25 · T34 |
-| **A7 · Peças de dados próprias** | Fase 6 | Broker e KV seus, com consenso; uma peça em Rust | A Nuvem oferece fila e configuração "gerenciadas" | Mata o líder, o cluster segue sem duas verdades | T22 cap. 3, 5, 6, 9, 11 |
+| **A7 · Peças de dados próprias** | Fase 6 | Broker e KV seus, com consenso; uma peça em Rust | A Nuvem oferece fila e configuração "gerenciadas" | Mata o líder, o cluster segue sem duas verdades | T22 cap. 4, 6, 7, 10, 12 |
 | **A8 · Produto em cima da plataforma** | Fases 7 e 8 | A Escola: monólito modular + serviços por motivo (juiz, mídia), orientada a eventos | Um segundo domínio reaproveitando tudo | Contratos entre Escola e Banco testados | T21 cap. 12, 15, 16 · T23 cap. 15 |
-| **A9 · Arquitetura defendida** | Fase 9 | O ecossistema na AWS e o design doc revisado | — | Well-Architected | T21 cap. 22, 23, 26, 27 · T22 cap. 12 · T29 › Solution Architecture Document |
+| **A9 · Arquitetura defendida** | Fase 9 | O ecossistema na AWS e o design doc revisado | — | Well-Architected | T21 cap. 22, 23, 26, 27 · T22 cap. 13 · T29 › Solution Architecture Document |
 
 Toda decisão de arquitetura registra o gatilho em [DECISOES.md](DECISOES.md). Quando um gatilho dispara antes do planejado, o item de evolução é puxado para a frente.
 
@@ -815,34 +815,34 @@ O que os livros e os cursos de Meus arquivos acrescentam a cada item. Somam-se a
 | **0.4** Concorrência | — | T24 › 10 Multithreading |
 | **1.1** API | T21 cap. 10 (camadas) | T24 › 04 Pacotes importantes; 09 APIs |
 | **1.2** Hexagonal | T21 cap. 3 (modularidade, acoplamento) · T23 cap. 8 (portas e adaptadores) | T29 › 010 Hexagonal e Clean · T24 › 20 Clean Architecture · T27 (padrões) · T29 › 008 SOLID |
-| **1.3** Postgres | **T22 cap. 2, 3 e 7** (modelos, B-tree, **isolamento e anomalias**: cobre a teoria da lacuna mais crítica) | T33 inteira · T24 › 06 Banco de dados; 17 SQLC; 18 UOW · T29 › Encontros › Unit of Work |
-| **1.4** Idempotência | T22 cap. 8 (redes não confiáveis) | T32 › Bônus · Comunicação e resiliência |
+| **1.3** Postgres | **T22 cap. 3, 4 e 8** (modelos, B-tree, **isolamento e anomalias**: cobre a teoria da lacuna mais crítica) | T33 inteira · T24 › 06 Banco de dados; 17 SQLC; 18 UOW · T29 › Encontros › Unit of Work |
+| **1.4** Idempotência | T22 cap. 9 (redes não confiáveis) | T32 › Bônus · Comunicação e resiliência |
 | **1.6** Serviço | — | T24 › 05 Context; 21 Deploy com Docker · T25 › 10 Docker · T34 › 012 (Dockerfile até imagem de produção) |
-| **1.7** Observabilidade | T22 cap. 1 (percentis, carga) · T21 cap. 4 a 6 (características e como medir) | T35 › 019 Observabilidade · T25 › 30 Prometheus e Grafana; 34 Observabilidade |
-| **2.1 a 2.6** Nuvem v0.1 | T21 cap. 13 (microkernel: a CLI e o agente) | T25 › 10 Docker; 33 Pipeline CI/CD · T24 › 16 Cobra CLI (2.6) · T34 › 012 |
+| **1.7** Observabilidade | T22 cap. 2 (percentis, carga) · T21 cap. 4 a 6 (características e como medir) | T35 › 019 Observabilidade · T25 › 30 Prometheus e Grafana; 34 Observabilidade |
+| **2.1 a 2.6** Nuvem v0.1 | T22 cap. 1 (nuvem x auto-hospedagem, cloud-native) · T21 cap. 13 (microkernel: a CLI e o agente) | T25 › 10 Docker; 33 Pipeline CI/CD · T24 › 16 Cobra CLI (2.6) · T34 › 012 |
 | **2.7** Blue/green | — | T25 › 29 Estratégias de deploy · T35 › 020 DevOps e SRE |
 | **3.1** Domínio do PIX | **T23 cap. 3, 4 e 12** (contextos, context map, EventStorming) · T21 cap. 8 e 11 (componentes; monólito modular) | T20 › Event Storming · T31 › Core Domain e Design Estratégico · T29 › Encontros › MDL e C4 |
-| **3.2** SPI e gRPC | T22 cap. 4 (Protobuf e evolução de esquema) · T21 cap. 9 (falácias da computação distribuída) | T24 › 14 gRPC |
-| **3.3** Saga | **T22 cap. 7 a 9** · T23 cap. 9 (saga e process manager) | T32 › 008 Saga; Case Mercado Bitcoin |
-| **3.4** Outbox | T23 cap. 9 (outbox) e 15 · T22 cap. 11 (CDC) | T32 › 005 Comunicação assíncrona; 006 EDA; 016 Kafka · T24 › 11 Manipulando eventos · T31 › Eventos de domínio |
+| **3.2** SPI e gRPC | T22 cap. 5 (Protobuf e evolução de esquema) · T21 cap. 9 (falácias da computação distribuída) | T24 › 14 gRPC |
+| **3.3** Saga | **T22 cap. 8 a 10** · T23 cap. 9 (saga e process manager) | T32 › 008 Saga; Case Mercado Bitcoin |
+| **3.4** Outbox | T23 cap. 9 (outbox) e 15 · T22 cap. 12 (CDC) | T32 › 005 Comunicação assíncrona; 006 EDA; 016 Kafka · T24 › 11 Manipulando eventos · T31 › Eventos de domínio |
 | **3.5** Resiliência | — | T32 › Bônus · Comunicação e resiliência · T27 (padrões) |
-| **3.6** Caos e conciliação | T22 cap. 8 e 10 (o job de conciliação é processamento em lote) · T21 cap. 22 (risco) | — |
-| **4.1** CQRS | T23 cap. 8 · T22 cap. 11 | T32 › 007 CQRS |
-| **4.2** Event sourcing | **T23 cap. 7** · T22 cap. 11 | — |
+| **3.6** Caos e conciliação | T22 cap. 9 e 11 (o job de conciliação é processamento em lote) · T21 cap. 22 (risco) | — |
+| **4.1** CQRS | T23 cap. 8 · T22 cap. 12 | T32 › 007 CQRS |
+| **4.2** Event sourcing | **T23 cap. 7** · T22 cap. 12 | — |
 | **4.3** Cache | — | T26 › Masterclass (tabelas hash, listas) |
 | **4.4** Extração | **T21 cap. 7, 14, 18 e 19** · **T23 cap. 11 e 14** | T32 › 002 a 004 · T29 › Encontros › SOS monólito; Provocações sobre arquitetura · T30 › Bônus |
-| **4.5** Carga | T22 cap. 1 | T26 › Big-O · T30 › System Design na prática |
-| **4.6** Réplica | **T22 cap. 5** | T33 |
-| **5.1 a 5.7** Nuvem v0.2 | T21 cap. 15 · T22 cap. 5 | T34 › 018 Cloud e Serverless; 022 Infra as Code · T25 › 35 Terraform · T24 › 15 Upload S3 (5.3) |
+| **4.5** Carga | T22 cap. 2 | T26 › Big-O · T30 › System Design na prática |
+| **4.6** Réplica | **T22 cap. 6** | T33 |
+| **5.1 a 5.7** Nuvem v0.2 | T21 cap. 15 · T22 cap. 6 | T34 › 018 Cloud e Serverless; 022 Infra as Code · T25 › 35 Terraform · T24 › 15 Upload S3 (5.3) |
 | **5.8** Kubernetes | — | T25 · T34 (ver o item) |
-| **6.1** Broker | **T22 cap. 3 e 11** (logs, LSM, streams) | T32 › 016 Apache Kafka |
-| **6.2** Raft | **T22 cap. 9** | — |
-| **6.3** Consistent hashing | **T22 cap. 6** | T30 › System Design |
+| **6.1** Broker | **T22 cap. 4 e 12** (logs, LSM, streams) | T32 › 016 Apache Kafka |
+| **6.2** Raft | **T22 cap. 10** | — |
+| **6.3** Consistent hashing | **T22 cap. 7** | T30 › System Design |
 | **7.1** Domínio da Escola | T23 cap. 10, 12 e 13 · T21 cap. 19 | T31 · T28 |
 | **7.4 e 7.5** Juiz e algoritmos | T21 cap. 12 (pipeline) | T26 inteira (problemas para o juiz, ao lado da T11) |
 | **7.6 e 8.x** Vídeo e ao vivo | T21 cap. 12, 15 e 16 | T30 › Lab · System Design da Netflix · T34 › 021 Edge Computing |
 | **9.1** AWS | — | T34 › 018 e 022 · T25 › 35 Terraform |
-| **9.2** Arquitetura defendida | **T21 cap. 22, 23, 26 e 27** · T22 cap. 12 | T29 › 005 (Solution Architecture Document; AWS Well-Architected) · T30 › Design Docs |
+| **9.2** Arquitetura defendida | **T21 cap. 22, 23, 26 e 27** · T22 cap. 13 | T29 › 005 (Solution Architecture Document; AWS Well-Architected) · T30 › Design Docs |
 
 ---
 
@@ -854,15 +854,15 @@ Situação na v2, depois dos livros e dos cursos de Meus arquivos:
 |---|---|---|---|
 | 1 | Git e GitHub | ◐ **T25 › 3 Git e GitHub** cobre o uso | O "Git por dentro" (objetos, refs, hooks) da 2.5 |
 | 2 | Domínio bancário e PIX | ✖ | Partidas dobradas, plano de contas, PIX (ISPB, DICT, SPI, MED), conciliação. **Alta** |
-| 3 | PostgreSQL a fundo | ◐ **T22 cap. 7** (isolamento, anomalias) e **T33** | O Postgres em si: MVCC, EXPLAIN, locks, replicação. Conferir o que a T33 cobre. **Crítica** |
+| 3 | PostgreSQL a fundo | ◐ **T22 cap. 8** (isolamento, anomalias) e **T33** | O Postgres em si: MVCC, EXPLAIN, locks, replicação. Conferir o que a T33 cobre. **Crítica** |
 | 4 | Autenticação e autorização | ✖ (candidato: T19 › Segurança de APIs) | Sessões x JWT, OAuth2/OIDC, RBAC/ABAC. **Alta** |
 | 5 | Docker e contêineres a fundo | ✔ **T25 › 10 Docker**, **T34 › 012** | Só a segurança de sandbox (seccomp, capabilities) da 7.4 |
 | 6 | Microsserviços | ✔ **T32**, **T21 cap. 18**, **T23 cap. 14**, T29 | — |
 | 7 | Testes de software | ◐ T24 › 08 Testing | TDD, testcontainers, testes de propriedade e de contrato (candidato: T19 › Testes Automatizados) |
 | 8 | Observabilidade na prática | ✔ **T35**, **T25 › 30 e 34** | — |
 | 9 | Virtualização e orquestração | ◐ orquestração ✔ (**T25**, **T34**) | Virtualização (KVM, API do Proxmox, Firecracker) |
-| 10 | Bancos e brokers por dentro | ◐ **T22 cap. 3** (teoria) e T32 › Kafka (uso) | WAL e fsync na prática |
-| 11 | Sistemas distribuídos a fundo | ✔ **T22 Parte II** | — |
+| 10 | Bancos e brokers por dentro | ◐ **T22 cap. 4** (teoria) e T32 › Kafka (uso) | WAL e fsync na prática |
+| 11 | Sistemas distribuídos a fundo | ✔ **T22 cap. 6 a 10** | — |
 | 12 | Mídia e streaming | ✖ | Codecs, ffmpeg, HLS/DASH, RTMP, WebRTC e SFU. Baixa (fases 7 e 8) |
 | 13 | Frontend por dentro | ✖ | JS/TS, navegador, o mini React. Baixa |
 | 14 | **Rust** (+ C++ para comparar) | ✖ | Ownership, borrowing, lifetimes, smart pointers; o C++ só para comparar RAII e comportamento indefinido. Ver o item 6.4 |
@@ -885,7 +885,7 @@ Situação na v2, depois dos livros e dos cursos de Meus arquivos:
 4. **T13 › Concorrência** + **T24 › 10 Multithreading** → **0.4** (mil transferências)
 5. **T18 › M1** (você já está nele) + **T13 › Biblioteca padrão e APIs HTTP** → **1.1** (API)
 6. **T21 cap. 3 e 10** + **T23 cap. 8** + **T9 › Arquitetura hexagonal** → **1.2** (a primeira evolução de arquitetura: A0 → A1)
-7. **T22 cap. 7** + **T33** + **T18 › M3 (ACID)** + **T13 › database/sql** → **1.3**
+7. **T22 cap. 8** + **T33** + **T18 › M3 (ACID)** + **T13 › database/sql** → **1.3**
 
 A T18 segue em paralelo, um módulo por semana, e os passos ⏳ vão sendo destravados à medida que as aulas chegam.
 
