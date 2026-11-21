@@ -1,4 +1,4 @@
-# Metodologia do Projeto infinito
+# Metodologia do Projeto de estudo
 
 > Como o Lucas estuda e constrói o ecossistema Banco, Nuvem e Escola com a IA.
 > Definida pelo Lucas em 21/11/2026. **Vale para todo item do [ROADMAP](ROADMAP.md)**: código, terminal, configuração, desenho, qualquer coisa.
@@ -20,7 +20,7 @@ Há dois lados, e eles conversam **por documentos**:
 
 | Lado | Onde | Papel |
 |---|---|---|
-| **Plataforma** | Trilha › aba Projeto (a construir, ver a seção 6) | Mostra o roadmap, em que item estamos, o que estudar (com link para a etapa) e **gera o prompt** que abre a conversa com a IA |
+| **Plataforma** | Trilha › Projeto de estudo (a construir, ver a seção 6) | Mostra o roadmap, em que item estamos, o que estudar (com link para a etapa) e **gera o prompt** que abre a conversa com a IA |
 | **IA** | Claude Code, na IDE, nesta pasta | Conduz o ciclo do item, olha o código de verdade, confere a execução e **registra tudo nos arquivos** |
 
 A IA **não** fica dentro da plataforma: no Claude Code ela já enxerga o código, o terminal e os documentos, e o prompt gerado só diz em que ponto estamos.
@@ -125,9 +125,9 @@ A sequência planejada está no [ROADMAP](ROADMAP.md), seção "O fio da arquite
 
 ---
 
-## 6. A plataforma: Trilha › Projeto (a construir)
+## 6. A plataforma: Trilha › Projeto de estudo (a construir)
 
-Uma nova opção no menu da Trilha (nome provisório: **Projeto**).
+Uma nova opção no menu da Trilha: **Projeto de estudo**.
 
 **O que ela mostra**
 - As fases e os itens do roadmap, com o estado de cada um (a fazer · em andamento, com a fase do ciclo · feito).
@@ -138,7 +138,8 @@ Uma nova opção no menu da Trilha (nome provisório: **Projeto**).
 Gera o texto do prompt (modelo em [PROMPT.md](PROMPT.md)) já preenchido com o item, a fase e os arquivos. O Lucas copia, cola no Claude Code e a conversa segue a metodologia.
 
 **De onde vêm os dados**
-- **Os documentos desta pasta são a fonte da verdade** sobre o projeto. A plataforma lê, não escreve.
+- **Os documentos deste caderno são a fonte da verdade** sobre o projeto. A plataforma lê, não escreve.
+- **Onde mora cada coisa** (decisão P3): o caderno é o repositório `projeto-de-estudo`, separado do app Trilha (o app é a ferramenta; o caderno é o conteúdo, que muda todo dia). O código fica nos repositórios de cada sistema (`codigo/banco`, `codigo/nuvem`…), cada um com o seu README e `docs/adr/`. O caderno guarda **o processo de aprender** (estudo, checagem, caminhos, repertório); o repositório do código guarda **o que foi decidido e construído**. O caderno do item aponta os commits.
 - O progresso do **estudo** é o da própria Trilha (etapas concluídas). A IA consulta pela API.
 
 Assim, cada lado registra o seu passo e o outro lê: o Lucas marca o estudo na Trilha, a IA registra o resto nos documentos.

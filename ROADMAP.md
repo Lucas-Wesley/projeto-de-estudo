@@ -2,7 +2,7 @@
 
 > Estudar porque precisa implementar, e implementar o que acabou de estudar.
 > Criado em 21/11/2026. Português (5) e Inglês (17) ficam de fora de propósito.
-> **Versão 2** (21/11/2026): a metodologia definida ([METODOLOGIA.md](METODOLOGIA.md)), o fio da arquitetura (seção 4), os três livros, os cursos de Meus arquivos (trilhas 21 a 35), Kubernetes (5.8) e Rust (6.4).
+> **Versão 3** (21/11/2026): os três livros com o sumário conferido e lidos por capítulo, no momento certo (seção 7.2); as trilhas que faltavam (T36 a T44), que fecham todas as lacunas; Rust do zero numa trilha paralela (R1 a R4); Kubernetes (5.8).
 > Cada passo aqui é um **item** da metodologia: problema → estudo → checagem → caminhos → decisão → plano → execução → fechamento. Onde estamos: [ESTADO.md](ESTADO.md).
 
 ---
@@ -118,7 +118,7 @@ As **pausadas** são fontes que o projeto puxa quando um item pede: não entram 
 | T18 | System Design T4 (LINUXtips) | curso | ativa |
 | T19 | Full Cycle 4.0 (catálogo) | catálogo de cursos | pausada |
 | T20 | Tech Leads Club | curso | ativa |
-| **T21** | **Livro: Fundamentos da Arquitetura de Software** (Richards e Ford, 2ª ed.) | livro | pausada · *sumário de memória, conferir* |
+| **T21** | **Livro: Fundamentos da Arquitetura de Software** (Richards e Ford, 2ª ed.) | livro | pausada |
 | **T22** | **Livro: Projetando Aplicações com Uso Intensivo de Dados** (Kleppmann e Riccomini, 2ª ed.) | livro | pausada |
 | **T23** | **Livro: Aprenda Domain-Driven Design** (Khononov) | livro | pausada |
 | T24 | Go Expert (Full Cycle) | curso | pausada |
@@ -133,8 +133,19 @@ As **pausadas** são fontes que o projeto puxa quando um item pede: não entram 
 | T33 | Banco de dados (MBA Full Cycle) | curso | pausada |
 | T34 | Infraestrutura: containers, cloud, IaC e edge (MBA Full Cycle) | curso | pausada |
 | T35 | Observabilidade, DevOps e SRE (MBA Full Cycle) | curso | pausada |
+| **T36** | **Rust do zero: memória sem coletor** | roteiro | pausada |
+| **T37** | **Bancos de dados a fundo (PostgreSQL)** | roteiro | pausada |
+| **T38** | **Domínio bancário e PIX** | roteiro | pausada |
+| **T39** | **Autenticação, autorização e segurança de aplicações** | roteiro | pausada |
+| **T40** | **Git, GitHub e CI/CD** | roteiro | pausada |
+| **T41** | **Plataforma, SRE e virtualização** (a parte de DevOps que faltava) | roteiro | pausada |
+| **T42** | **Testes de software** | roteiro | pausada |
+| **T43** | **Mídia e streaming** | roteiro | pausada |
+| **T44** | **Frontend por dentro** | roteiro | pausada |
 
-Ficaram de fora, a seu pedido: Reputação e Marketing Pessoal (Elemar Jr); Marketing Pessoal, Liderança e Trabalho em Equipe, Empreendedorismo e Prompt Engineering (MBA); e os encontros ao vivo de carreira e mentoria. **Em dúvida:** os bônus FC TechWeek IA #1 e #2 (fundamentos de IA, workflow com IA, MCP e agentes) ficaram de fora junto com o Prompt Engineering.
+As de **roteiro** (T36 a T44) seguem o padrão das trilhas 8 a 15: cada etapa diz o que aprender e como praticar, cada módulo fecha com um projeto, e o conteúdo entra depois (lição gerada ou "Encaixar material"), da melhor fonte. Vários projetos de módulo **são** itens deste roadmap (o Dinheiro em Rust, o esquema do Banco, o gatilho do git push, o sandbox do juiz).
+
+Ficaram de fora, a seu pedido: Reputação e Marketing Pessoal (Elemar Jr); Marketing Pessoal, Liderança e Trabalho em Equipe, Empreendedorismo e Prompt Engineering (MBA); e os encontros ao vivo de carreira e mentoria. Os bônus FC TechWeek IA #1 e #2 também ficaram de fora, junto com o Prompt Engineering.
 
 ### Os livros no projeto
 Os livros são a **teoria de fundo** e acompanham o projeto inteiro, capítulo a capítulo, no momento em que o item precisa:
@@ -143,7 +154,7 @@ Os livros são a **teoria de fundo** e acompanham o projeto inteiro, capítulo a
 - **T21 Richards e Ford (arquitetura)** acompanha o fio da arquitetura (seção 4) do começo ao fim.
 - **T22 Kleppmann (dados)** entra quando o dado fica sério: o Postgres (Fase 1) e, depois, tudo que é distribuído (Fases 3, 4 e 6).
 
-O mapa capítulo → item está na seção 7.
+**Nenhum livro é lido de uma vez.** Cada capítulo é lido quando um item precisa dele, e os três foram escritos para isso: cada capítulo se sustenta sozinho. O plano de leitura, capítulo por capítulo, está na seção 7.2.
 
 ---
 
@@ -177,13 +188,13 @@ Cada passo tem o mesmo formato:
   - ✔ você tem e cobre bem
   - ◐ você tem, mas é raso para este uso e precisa aprofundar
   - ⏳ módulo da T18 que ainda não tem etapas (você está colando as aulas)
-  - ✖ **lacuna**: nenhuma trilha cobre, vira trilha futura (ver a seção 8)
+  - ✖ **lacuna**: nenhuma trilha cobre (na v3 não há mais nenhuma; ver a seção 8)
 - **Pronto quando**: o critério objetivo para dar o passo como feito.
 - **Repositório**: onde entra.
 
 A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você vai **precisar** de cada coisa.
 
-**"Estudar antes" é a lista de candidatos, não a ordem final.** Na fase de estudo do item, a IA olha todas as trilhas (inclusive as da seção 7, que entraram na v2), escolhe a melhor fonte e prova por que ela é necessária (METODOLOGIA §3.2).
+**"Estudar antes" é a lista de candidatos, não a ordem final.** Na fase de estudo do item, a IA olha todas as trilhas (inclusive as que entraram depois deste roadmap), escolhe a melhor fonte e prova por que ela é necessária (METODOLOGIA §3.2).
 
 ---
 
@@ -198,7 +209,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T13 › Fundamentos › Por que Go e o ambiente
   - ✔ T12 › Terminal e shell › O shell; Pipes, redirecionamento e exit codes
   - ✔ T13 › Pacotes, módulos e testes › Módulos e dependências
-  - ✖ **Git e GitHub** (branches, rebase, PR, tags)
+  - ✔ T40 › Git no dia a dia; Colaboração no GitHub
 - **Pronto quando:** `make test` passa e o repositório público tem README e licença.
 - **Repositório:** `banco`
 
@@ -220,7 +231,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T9 › Tático I › Entidades e identidade; Agregados e invariantes
   - ✔ T13 › Tipos compostos › Structs e embutimento; Maps; Arrays e slices por dentro
   - ✔ T13 › Métodos, interfaces e erros › Métodos e receptores; Erros idiomáticos
-  - ✖ **Domínio bancário**: contabilidade de partidas dobradas, tipos de conta, plano de contas
+  - ✔ T38 › Contabilidade para quem programa; Contas e dinheiro
 - **Pronto quando:** existe um glossário (a linguagem ubíqua) no README e um teste de propriedade mostra que, depois de N operações aleatórias, a soma global é zero.
 - **Repositório:** `banco`
 
@@ -265,7 +276,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T15 › Dados em escala › SQL x NoSQL; Índices e consultas
   - ✔ T11 › Árvores de busca › B-trees e índices de banco
   - ⏳ T18 › M4 Databases, modelos de dados e indexação
-  - ✖ **PostgreSQL a fundo**: níveis de isolamento, MVCC, locks e anomalias (lost update, write skew). **Esta é a lacuna mais crítica do Banco.**
+  - ✔ T37 › Modelagem relacional; Transações e concorrência (MVCC, isolamento, anomalias, locks). **O ponto mais crítico do Banco.**
 - **Pronto quando:** o teste da Fase 0.4 roda contra o Postgres real (com testcontainers) e a soma global continua zero.
 - **Repositório:** `banco`
 
@@ -283,7 +294,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
 - **Estudar antes:**
   - ✔ T10 › Criptografia aplicada › Hash e HMAC; Senhas: bcrypt, scrypt e Argon2
   - ✔ T8 › HTTP e APIs › Segurança no navegador: CORS, cookies e cabeçalhos
-  - ✖ **Autenticação e autorização**: sessões x JWT, OAuth2/OIDC, RBAC/ABAC
+  - ✔ T39 › Fundamentos; Sessões e tokens
 - **Pronto quando:** existem testes do tipo "um cliente tenta ler a conta de outro" que retornam 404 (e não 403).
 - **Repositório:** `banco`
 
@@ -294,7 +305,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T13 › Concorrência › context
   - ✔ T13 › Ferramentas, runtime e produção › Build e deploy
   - ◐ T8 › Redes de contêineres › Redes do Docker e do Compose (cobre a rede, não as imagens)
-  - ✖ **Docker e contêineres a fundo**: imagens OCI, camadas, multi-stage, compose
+  - ✔ T25 › 10 Docker · T34 › 012 Docker & Kubernetes (Dockerfile até a imagem de produção)
 - **Pronto quando:** o Banco roda no Proxmox via compose, e um `kill -TERM` no meio de uma carga não perde nenhuma transferência.
 - **Repositório:** `banco`
 
@@ -359,8 +370,8 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
 - **Estudar antes:**
   - ✔ T12 › Shell script › Scripts robustos; Projeto: script de deploy
   - ✔ T8 › Infra como código › CI/CD e rede: deploy sem downtime
-  - ✖ **Git por dentro** (objetos, refs, hooks, protocolo de push)
-  - ✖ **Docker a fundo** (build e cache de camadas) — a mesma lacuna da 1.6
+  - ✔ T40 › Git por dentro (o projeto do módulo é este gatilho)
+  - ✔ T25 › 10 Docker (build e cache de camadas)
 - **Pronto quando:** você dá push numa mudança do Banco e ela está no ar em menos de 2 minutos.
 - **Repositório:** `nuvem`
 
@@ -393,7 +404,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T9 › Descobrir o domínio › Event Storming: big picture; Process e design level; Projeto: workshop de descoberta
   - ✔ T9 › Design estratégico › Bounded context; Context mapping; Projeto: context map
   - ✔ T9 › Por que DDD › Subdomínios: core, suporte e genérico
-  - ✖ **Domínio PIX** (regras do Bacen: ISPB, DICT, SPI, devolução, MED). É material novo de domínio, não técnico.
+  - ✔ T38 › O sistema de pagamentos; PIX
 - **Pronto quando:** o context map diz para cada relação qual padrão ela usa (ACL, cliente/fornecedor etc.).
 - **Repositório:** `banco` (pasta `docs/`)
 
@@ -449,7 +460,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T8 › Transporte › Projeto: TCP e UDP em rede ruim
   - ✔ T8 › Observabilidade e troubleshooting › Engenharia do caos na rede
   - ✔ T12 › Processos e serviços › Agendamento: cron e timers
-  - ✖ **Conciliação financeira** (entra na trilha de domínio bancário)
+  - ✔ T38 › Operação financeira
 - **Pronto quando:** depois de uma hora de caos, a conciliação fecha no zero ou aponta exatamente a diferença.
 - **Repositórios:** `banco`, `spi`
 
@@ -505,7 +516,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T9 › Design estratégico › Fronteiras, times e Conway
   - ✔ T9 › DDD no mundo real › Refatorar para um insight mais profundo
   - ⏳ T18 › M6 Microsserviços, monolitos e domínios; M15 Scale cube
-  - ✖ **Microsserviços** (o livro que você está lendo; vale virar trilha)
+  - ✔ T32 › 002 a 004 · T21 cap. 18 e 19 · T23 cap. 14
 - **Pronto quando:** um ADR justifica a extração e a antifraude fora do ar **não** impede um PIX. Ela degrada (o PIX passa e é revisado depois) em vez de travar.
 - **Repositório:** `banco` (monorepo ganha um segundo binário)
 
@@ -572,7 +583,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
 - **Estudar antes:**
   - ✔ T4 › Segurança e identidade › Responsabilidade compartilhada; IAM: usuário raiz, usuários, grupos, funções e políticas
   - ✔ T14 › Conta, acesso e ferramentas › IAM a fundo
-  - ✖ **Autenticação e autorização** — a mesma lacuna da 1.5
+  - ✔ T39 › Autorização (motores de política e o IAM em miniatura)
 - **Pronto quando:** o teste "app sem permissão tenta ler o bucket" falha com uma mensagem clara de qual política negou.
 - **Repositório:** `nuvem`
 
@@ -585,8 +596,8 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T8 › Enlace e rede local › VLANs, Wi-Fi e segmentação da rede
   - ✔ T1 › Redes separadas e firewall (toda a seção)
   - ✔ T4 › Computação › Elasticidade e alta disponibilidade
-  - ✖ **Virtualização** (KVM, a API do Proxmox, microVMs como o Firecracker)
-  - ✖ **Orquestração no estilo Kubernetes** (loop de reconciliação, estado desejado x atual)
+  - ✔ T41 › Virtualização; Contêineres e microVMs por dentro
+  - ✔ T41 › Orquestração por dentro
 - **Pronto quando:** você desliga uma VM e todos os apps voltam nas outras em menos de 1 minuto.
 - **Repositório:** `nuvem`
 
@@ -604,7 +615,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
 - **Estudar antes:**
   - ✔ T14 › Infraestrutura como código › CloudFormation; Terraform na AWS
   - ✔ T8 › Infra como código › Rede como código com Terraform; GitOps
-  - ✖ **Orquestração no estilo Kubernetes** — a mesma lacuna da 5.5
+  - ✔ T41 › Orquestração por dentro; Infraestrutura como código
 - **Pronto quando:** você apaga um app na mão, e a Nuvem recria a partir do yaml.
 - **Repositório:** `nuvem`
 
@@ -634,7 +645,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T13 › Biblioteca padrão › io, bufio, os e arquivos
   - ✔ T14 › Mensageria e integração › SQS; SNS e fan-out; Kinesis e streaming (referência)
   - ⏳ T18 › M13 Comunicação assíncrona; M16 Sharding e particionamento
-  - ✖ **Por dentro dos bancos e brokers** (WAL, fsync, LSM, como o Kafka guarda o log)
+  - ✔ T37 › Por dentro de um banco · T22 cap. 4 e 12
 - **Pronto quando:** você mata o broker durante a escrita e, ao voltar, nenhuma mensagem confirmada se perdeu.
 - **Repositório:** `fila`
 
@@ -645,7 +656,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T8 › System design II › Partições de rede, consistência e CAP; Projeto: um key-value distribuído que aguenta falhas
   - ✔ T18 › M3 inteiro (CAP, PACELC, as críticas modernas)
   - ⏳ T18 › Extra: Read the papers (o paper do Raft)
-  - ✖ **Sistemas distribuídos a fundo** (no nível do livro *Designing Data-Intensive Applications*)
+  - ✔ T22 cap. 9 e 10
 - **Pronto quando:** com 3 nós, você derruba o líder e o cluster continua aceitando escritas, e um teste de partição de rede não produz duas verdades.
 - **Repositório:** `kv`
 
@@ -658,18 +669,29 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
 - **Pronto quando:** ao adicionar um nó, só cerca de 1/N das chaves mudam de lugar (medido).
 - **Repositórios:** `fila`, `nuvem`
 
-#### 6.4 Rust: memória sem coletor e sem `free`
+#### 6.4 Rust: a peça de verdade
 - **Por quê aqui:** o segmento de log do `fila` é código de baixo nível, quente e cheio de buffers. É o lugar em que o modelo de memória do Rust faz diferença de verdade.
-- **Implementar:**
-  1. **Laboratório de memória (antes do código do projeto):** três bugs clássicos escritos em C++, Go e Rust: *use-after-free*, *data race* e *invalidação de iterador* (mexer num vetor enquanto percorre). Em C++ compila e quebra (ou pior, funciona às vezes); em Go o GC e o detector de corrida mudam o problema; em Rust **não compila**, e o erro do compilador explica por quê.
-  2. **A peça:** o segmento de log do `fila` reescrito em Rust (append, leitura por offset, índice esparso), chamado pelo broker em Go (por processo separado ou FFI, decisão do item).
+- **Antes:** a trilha paralela de Rust (R1 a R4, logo abaixo) precisa estar feita. Você chega aqui já tendo escrito Rust quatro vezes.
+- **Implementar:** o segmento de log do `fila` reescrito em Rust (append, leitura por offset, índice esparso), chamado pelo broker em Go (por processo separado ou FFI, decisão do item).
 - **Estudar antes:**
-  - ✖ **Rust**: ownership, move, borrowing (`&` e `&mut`), lifetimes, `Box`, `Rc`/`Arc`, `RefCell`/`Mutex`, `Drop`, `unsafe` e o que ele libera
-  - ✖ **C++ para comparar** (só o necessário): ponteiros e referências, RAII, `unique_ptr`/`shared_ptr`, move semantics e comportamento indefinido
-  - ✔ T13 › Ferramentas, runtime e produção › Runtime: scheduler, GC e escape analysis (o lado do Go)
-  - ✔ T10 e T12 › memória virtual, pilha e heap
-- **Pronto quando:** o documento do laboratório explica, com os três bugs, a diferença entre os três modelos (RAII manual do C++, GC do Go, ownership do Rust), e a peça em Rust passa nos mesmos testes da versão Go com o benchmark comparado.
-- **Repositórios:** `fila`, e `laboratorio-memoria` para o item 1
+  - ✔ T36 › Baixo nível (unsafe, FFI, I/O em disco: buffers, mmap e fsync)
+  - ✔ T22 cap. 4 (log estruturado, LSM) e T37 › Por dentro de um banco
+- **Pronto quando:** a peça em Rust passa nos mesmos testes da versão Go, com o benchmark comparado e um ADR sobre a fronteira Go–Rust.
+- **Repositório:** `fila`
+
+---
+
+### Trilha paralela: Rust do zero (R1 a R4)
+*Você nunca viu Rust. Então ele entra aos poucos, em paralelo às fases, sempre reescrevendo algo que você já fez em Go: o problema é conhecido e só a linguagem é nova. A T36 é a base de todos.*
+
+| Item | Quando | Estudar | Implementar | Pronto quando |
+|---|---|---|---|---|
+| **R1** · Primeiro Rust | Depois da Fase 1 | T36 › Primeiros passos; Ownership; Tipos próprios e erros | O `Dinheiro` (0.2) em Rust | Os mesmos casos de teste do Go passam em Rust |
+| **R2** · Rust organizado | Depois da Fase 3 | T36 › Abstração; Módulos, testes e ferramentas | Um leitor do extrato do Banco (CSV) em Rust, com biblioteca e binário | clippy sem avisos e testes de documentação rodando |
+| **R3** · A memória comparada | Depois da Fase 4 | T36 › Smart pointers; **Rust x C++ x Go** | O **laboratório de memória**: use-after-free, data race e invalidação de iterador em C++, Go e Rust | O texto do laboratório explica os três modelos (RAII manual, coletor, ownership) com os 9 programas |
+| **R4** · Concorrência e baixo nível | Depois da Fase 5 | T36 › Concorrência sem medo; Baixo nível | Um KV em TCP com Tokio e o protótipo do segmento de log | Pronto para o 6.4 |
+
+Repositório: `rust-estudos` (R1 a R3) e `fila` (R4 em diante).
 
 ---
 
@@ -709,7 +731,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T8 › Segurança de rede › Ataques e defesas de rede
   - ✔ T13 › Padrões de concorrência (worker pool); T13 › Concorrência › Projeto: produtor e consumidor
   - ✔ T15 › Blocos de construção › Filas e processamento assíncrono
-  - ✖ **Segurança de sandbox** (seccomp, capabilities, gVisor). Pode ficar na trilha de Docker a fundo ou numa trilha de segurança.
+  - ✔ T39 › Sandbox: rodar código de estranhos · T41 › Contêineres e microVMs por dentro
 - **Pronto quando:** um `for {}`, um fork bomb, a leitura de `/etc/passwd` do host e uma tentativa de abrir conexão de rede falham, e nenhum deles afeta as outras submissões.
 - **Repositório:** `escola` (binário `juiz` no monorepo)
 
@@ -725,7 +747,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T15 › Estudos de caso › Notificações e upload de vídeo
   - ✔ T8 › Borda › CDN e cache na borda; T15 › CDN e borda
   - ✔ T8 › HTTP e APIs › Cache HTTP e conteúdo condicional
-  - ✖ **Mídia e streaming** (codecs, contêineres, ffmpeg, HLS e DASH, RTMP)
+  - ✔ T43 › Fundamentos de mídia; Vídeo sob demanda
 - **Pronto quando:** uma aula de 1 hora toca no Samsung trocando de qualidade conforme a rede, e a segunda visualização vem do cache da borda.
 - **Repositório:** `escola` (binário `midia`)
 
@@ -765,7 +787,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
   - ✔ T8 › HTTP e APIs › WebRTC: conexão ponto a ponto, ICE e arquiteturas multiparte
   - ✔ T8 › Transporte › UDP e quando usá-lo; QUIC e o transporte moderno
   - ✔ T8 › IP › NAT, PAT e por que a internet funciona com IPv4 (é a razão do TURN)
-  - ✖ **WebRTC e SFU a fundo** (entra na trilha de mídia e streaming)
+  - ✔ T43 › Tempo real com WebRTC
 - **Pronto quando:** 4 pessoas (Mac, Samsung e duas abas) estão numa sala, inclusive uma de fora de casa pelo Tailscale.
 - **Repositório:** `escola`
 
@@ -774,7 +796,7 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
 - **Estudar antes:**
   - ✔ T8 › Borda › CDN e cache na borda
   - ✔ T15 › Blocos de construção › CDN e borda
-  - ✖ **Mídia e streaming** — a mesma lacuna da 7.6
+  - ✔ T43 › Ao vivo
 - **Pronto quando:** um teste de carga com 500 espectadores simulados não aumenta o uso de CPU da origem.
 - **Repositório:** `escola`
 
@@ -803,91 +825,158 @@ A ordem pula de trilha em trilha de propósito. Ela segue a ordem em que você v
 
 ---
 
-## 7. As fontes novas por item (v2)
+## 7. A ordem de estudo
 
-O que os livros e os cursos de Meus arquivos acrescentam a cada item. Somam-se ao "Estudar antes" do item.
+### 7.1 Item a item
 
-| Item | Livros | Cursos |
+Somam-se ao "Estudar antes" de cada item. Livro sempre por **capítulo**, nunca inteiro. Na fase de estudo, a IA escolhe o mínimo que destrava a decisão do item e justifica (METODOLOGIA §3.2).
+
+| Item | Livros (capítulos) | Trilhas e cursos |
 |---|---|---|
-| **0.1** Repositório | T21 cap. 1, 2 e 21 (o que é arquitetura; ADR desde o primeiro dia) | T25 › 3 Git e GitHub · T24 › 01 Introdução, 02 Configurando o ambiente |
-| **0.2** Dinheiro | T23 cap. 5 e 6 (lógica simples x domain model; value objects) | T24 › 03 Fundação; 08 Testing · T28 e T31 › value objects |
-| **0.3** Razão | T23 cap. 1 e 2 (subdomínios, linguagem ubíqua) e 6 (agregados) | T31 › Prática: Agregados e Objetos de valores · T28 › Masterclass |
-| **0.4** Concorrência | — | T24 › 10 Multithreading |
-| **1.1** API | T21 cap. 10 (camadas) | T24 › 04 Pacotes importantes; 09 APIs |
-| **1.2** Hexagonal | T21 cap. 3 (modularidade, acoplamento) · T23 cap. 8 (portas e adaptadores) | T29 › 010 Hexagonal e Clean · T24 › 20 Clean Architecture · T27 (padrões) · T29 › 008 SOLID |
-| **1.3** Postgres | **T22 cap. 3, 4 e 8** (modelos, B-tree, **isolamento e anomalias**: cobre a teoria da lacuna mais crítica) | T33 inteira · T24 › 06 Banco de dados; 17 SQLC; 18 UOW · T29 › Encontros › Unit of Work |
+| **0.1** Repositório | T21 cap. 1, 2 e 21 (o que é arquitetura; o ADR desde o primeiro dia) | T40 › Git no dia a dia; Colaboração no GitHub · T24 › 01 e 02 |
+| **0.2** Dinheiro | T23 cap. 5 e 6 (lógica simples x modelo de domínio; objetos de valor) | T42 › Fundamentos · T24 › 03 Fundação; 08 Testing · T31 e T28 (objetos de valor) |
+| **0.3** Razão | T23 cap. 1 e 2 (subdomínios, linguagem ubíqua) | **T38 › Contabilidade para quem programa; Contas e dinheiro** · T42 › TDD · T31 › Prática: Agregados |
+| **0.4** Concorrência | — | T24 › 10 Multithreading · T42 › Propriedades e fuzzing |
+| **1.1** API | T21 cap. 10 (camadas) | T24 › 04 e 09 APIs · T42 › Integração (testes de API) |
+| **1.2** Hexagonal | T21 cap. 3 (modularidade) · T23 cap. 8 (portas e adaptadores) | T29 › 010 Hexagonal e Clean · T24 › 20 Clean Architecture · T27 · T29 › 008 SOLID |
+| **1.3** Postgres | **T22 cap. 3, 4 e 8** (modelos, armazenamento, **transações e isolamento**) | **T37 › Modelagem; SQL além do CRUD; Índices e planos; Transações e concorrência** · T33 · T24 › 06, 17 SQLC, 18 UOW · T42 › Testcontainers |
 | **1.4** Idempotência | T22 cap. 9 (redes não confiáveis) | T32 › Bônus · Comunicação e resiliência |
-| **1.6** Serviço | — | T24 › 05 Context; 21 Deploy com Docker · T25 › 10 Docker · T34 › 012 (Dockerfile até imagem de produção) |
-| **1.7** Observabilidade | T22 cap. 2 (percentis, carga) · T21 cap. 4 a 6 (características e como medir) | T35 › 019 Observabilidade · T25 › 30 Prometheus e Grafana; 34 Observabilidade |
-| **2.1 a 2.6** Nuvem v0.1 | T22 cap. 1 (nuvem x auto-hospedagem, cloud-native) · T21 cap. 13 (microkernel: a CLI e o agente) | T25 › 10 Docker; 33 Pipeline CI/CD · T24 › 16 Cobra CLI (2.6) · T34 › 012 |
-| **2.7** Blue/green | — | T25 › 29 Estratégias de deploy · T35 › 020 DevOps e SRE |
-| **3.1** Domínio do PIX | **T23 cap. 3, 4 e 12** (contextos, context map, EventStorming) · T21 cap. 8 e 11 (componentes; monólito modular) | T20 › Event Storming · T31 › Core Domain e Design Estratégico · T29 › Encontros › MDL e C4 |
-| **3.2** SPI e gRPC | T22 cap. 5 (Protobuf e evolução de esquema) · T21 cap. 9 (falácias da computação distribuída) | T24 › 14 gRPC |
-| **3.3** Saga | **T22 cap. 8 a 10** · T23 cap. 9 (saga e process manager) | T32 › 008 Saga; Case Mercado Bitcoin |
-| **3.4** Outbox | T23 cap. 9 (outbox) e 15 · T22 cap. 12 (CDC) | T32 › 005 Comunicação assíncrona; 006 EDA; 016 Kafka · T24 › 11 Manipulando eventos · T31 › Eventos de domínio |
-| **3.5** Resiliência | — | T32 › Bônus · Comunicação e resiliência · T27 (padrões) |
-| **3.6** Caos e conciliação | T22 cap. 9 e 11 (o job de conciliação é processamento em lote) · T21 cap. 22 (risco) | — |
-| **4.1** CQRS | T23 cap. 8 · T22 cap. 12 | T32 › 007 CQRS |
-| **4.2** Event sourcing | **T23 cap. 7** · T22 cap. 12 | — |
-| **4.3** Cache | — | T26 › Masterclass (tabelas hash, listas) |
-| **4.4** Extração | **T21 cap. 7, 14, 18 e 19** · **T23 cap. 11 e 14** | T32 › 002 a 004 · T29 › Encontros › SOS monólito; Provocações sobre arquitetura · T30 › Bônus |
-| **4.5** Carga | T22 cap. 2 | T26 › Big-O · T30 › System Design na prática |
-| **4.6** Réplica | **T22 cap. 6** | T33 |
-| **5.1 a 5.7** Nuvem v0.2 | T21 cap. 15 · T22 cap. 6 | T34 › 018 Cloud e Serverless; 022 Infra as Code · T25 › 35 Terraform · T24 › 15 Upload S3 (5.3) |
-| **5.8** Kubernetes | — | T25 · T34 (ver o item) |
-| **6.1** Broker | **T22 cap. 4 e 12** (logs, LSM, streams) | T32 › 016 Apache Kafka |
+| **1.5** Autenticação | — | **T39 › Fundamentos; Sessões e tokens** |
+| **1.6** Serviço | — | T24 › 05 Context; 21 Deploy · T25 › 10 Docker · T34 › 012 |
+| **1.7** Observabilidade | T22 cap. 2 (percentis) · T21 cap. 4, 5 e 6 (características e funções de aptidão) | **T41 › SRE; Observabilidade na prática** · T35 › 019 · T25 › 30 e 34 |
+| **R1** Primeiro Rust | — | **T36 › módulos 1 a 3** |
+| **2.1 a 2.6** Nuvem v0.1 | T22 cap. 1 (nuvem x auto-hospedagem) · T21 cap. 13 (microkernel: a CLI e o agente) | **T40 › Git por dentro** (2.5) · T41 › Contêineres por dentro (2.1) · T25 › 10 e 33 · T24 › 16 Cobra CLI (2.6) |
+| **2.7** Blue/green | — | T40 › Entrega contínua · T25 › 29 Estratégias de deploy |
+| **3.1** Domínio do PIX | **T23 cap. 3, 4 e 12** · T21 cap. 8, 11 e 23 (componentes, monólito modular, diagramas C4) | **T38 › O sistema de pagamentos; PIX** · T20 › Event Storming · T31 › Core Domain · T29 › Encontros › MDL e C4 |
+| **3.2** SPI e gRPC | T22 cap. 5 (codificação e evolução) · T21 cap. 9 (as falácias) | T24 › 14 gRPC · T39 › Segurança de APIs (mTLS) · T42 › Contratos |
+| **3.3** Saga | **T22 cap. 8, 9 e 10** · T23 cap. 9 · T21 cap. 20 (orquestração x coreografia) | T32 › 008 Saga; Case Mercado Bitcoin |
+| **3.4** Outbox | T23 cap. 9 e 15 · T22 cap. 12 (CDC) | T32 › 005 e 006; 016 Kafka · T24 › 11 · T37 › Replicação lógica e CDC |
+| **3.5** Resiliência | — | T32 › Bônus · Comunicação e resiliência · T27 |
+| **3.6** Caos e conciliação | T22 cap. 9 e 11 · T21 cap. 22 (risco) | **T38 › Operação financeira** · T41 › Confiabilidade (caos) |
+| **3.7** Rate limit e IDs | T22 cap. 10 (geradores de IDs e relógios lógicos) | — |
+| **R2** Rust organizado | — | **T36 › módulos 4 e 5** |
+| **4.1** CQRS | T23 cap. 8 · T21 cap. 20 · T22 cap. 3 e 12 | T32 › 007 CQRS |
+| **4.2** Event sourcing | **T23 cap. 7** · T22 cap. 3 e 12 | — |
+| **4.3** Cache | — | T26 · T37 › Redis |
+| **4.4** Extração | **T21 cap. 7, 14, 17, 18 e 19** · **T23 cap. 11 e 14** | T32 › 002 a 004 · T29 › Encontros › SOS monólito; Provocações · T30 › Bônus |
+| **4.5** Carga | T22 cap. 2 | T26 › Big-O · T42 › Desempenho · T41 › Capacidade |
+| **4.6** Réplica | **T22 cap. 6** | **T37 › Durabilidade e replicação** · T41 › Backup e DR |
+| **R3** A memória comparada | — | **T36 › módulos 6 e 7** (inclui o C++) |
+| **5.1 a 5.7** Nuvem v0.2 | T21 cap. 15 · T22 cap. 6 | **T41 › Virtualização; Orquestração por dentro; IaC** · **T39 › Autorização** (5.4) · T37 › Operação (5.1) · T34 › 018 e 022 · T24 › 15 Upload S3 |
+| **5.8** Kubernetes | — | T25 · T34 · T40 › GitOps |
+| **R4** Concorrência e baixo nível | — | **T36 › módulos 8 e 9** |
+| **6.1** Broker | **T22 cap. 4 e 12** | T37 › Por dentro de um banco · T32 › 016 Kafka |
 | **6.2** Raft | **T22 cap. 10** | — |
-| **6.3** Consistent hashing | **T22 cap. 7** | T30 › System Design |
-| **7.1** Domínio da Escola | T23 cap. 10, 12 e 13 · T21 cap. 19 | T31 · T28 |
-| **7.4 e 7.5** Juiz e algoritmos | T21 cap. 12 (pipeline) | T26 inteira (problemas para o juiz, ao lado da T11) |
-| **7.6 e 8.x** Vídeo e ao vivo | T21 cap. 12, 15 e 16 | T30 › Lab · System Design da Netflix · T34 › 021 Edge Computing |
-| **9.1** AWS | — | T34 › 018 e 022 · T25 › 35 Terraform |
-| **9.2** Arquitetura defendida | **T21 cap. 22, 23, 26 e 27** · T22 cap. 13 | T29 › 005 (Solution Architecture Document; AWS Well-Architected) · T30 › Design Docs |
+| **6.3** Consistent hashing | **T22 cap. 7** | T37 › Escala · T30 |
+| **6.4** Rust | — | T36 › Baixo nível |
+| **7.1** Domínio da Escola | T23 cap. 10, 13 e 18 · T21 cap. 19 | T31 · T28 |
+| **7.3** Pagar com PIX | — | T38 › PIX (QR dinâmico, devolução) · T39 › Segurança de APIs |
+| **7.4 e 7.5** Juiz | T21 cap. 12 (pipeline) | **T39 › Sandbox** · T26 e T11 (os problemas) |
+| **7.6 e 8.x** Vídeo e ao vivo | T21 cap. 15 e 16 | **T43** inteira · T30 › Lab Netflix · T34 › 021 Edge |
+| **Painel da Nuvem e da Escola** | — | **T44** (quando chegar a hora da interface) |
+| **9.1** AWS | — | T34 › 018 e 022 · T25 › 35 · T40 › CI/CD (OIDC) |
+| **9.2** Arquitetura defendida | **T21 cap. 22, 23, 26 e 27** · T22 cap. 13 e 14 · T23 cap. 16 e 17 | T29 › 005 Solution Architecture Document · T30 › Design Docs |
+
+### 7.2 Os livros, capítulo por capítulo
+
+A ordem em que cada capítulo aparece no projeto. É assim que os livros são lidos: aos pedaços, quando o item pede.
+
+**T23 · Aprenda Domain-Driven Design (Khononov)**: abre o projeto e volta a cada domínio novo.
+
+| Cap. | Assunto | Lido no item |
+|---|---|---|
+| 1 e 2 | Domínios, subdomínios e linguagem ubíqua | 0.3 |
+| 5 e 6 | Lógica simples x modelo de domínio | 0.2 |
+| 8 | Padrões de arquitetura (portas e adaptadores, CQRS) | 1.2 (e revisto em 4.1) |
+| 3 e 4 | Contextos delimitados e integração entre eles | 3.1 |
+| 12 | EventStorming | 3.1 |
+| 9 | Padrões de comunicação (outbox, saga) | 3.3 e 3.4 |
+| 15 | Arquitetura orientada a eventos | 3.4 |
+| 7 | Modelando a dimensão do tempo (event sourcing) | 4.2 |
+| 11 e 14 | Evoluir o design; microsserviços | 4.4 |
+| 10, 13 e 18 | Heurísticas, DDD no mundo real, estudo de caso | 7.1 |
+| 16 e 17 | Malha de dados; palavras finais | 9.2 |
+
+**T21 · Fundamentos da Arquitetura de Software (Richards e Ford)**: acompanha o fio da arquitetura (seção 4).
+
+| Cap. | Assunto | Lido no item |
+|---|---|---|
+| 1, 2 e 21 | O que é arquitetura, pensar em trade-offs, ADRs | 0.1 |
+| 10 | Estilo em camadas | 1.1 |
+| 3 | Modularidade (coesão, acoplamento) | 1.2 |
+| 4, 5 e 6 | Características arquiteturais e funções de aptidão | 1.7 |
+| 13 | Microkernel | 2.x |
+| 8, 11 e 23 | Componentes, monólito modular, diagramas | 3.1 |
+| 9 | Monolítico x distribuído e as falácias | 3.2 |
+| 20 | Padrões arquiteturais (orquestração x coreografia, CQRS) | 3.3 e 4.1 |
+| 22 | Risco arquitetural | 3.6 |
+| 7, 14, 17, 18 e 19 | Quantum, baseado em serviços, SOA, microsserviços, escolher o estilo | 4.4 |
+| 15 | Orientado a eventos | 5.x (e revisto em 7.6) |
+| 12 | Pipeline | 7.4 |
+| 16 | Baseado em espaço | 8.x |
+| 26 e 27 | Interseções e as leis revisitadas | 9.2 |
+| 24 e 25 | Equipes eficazes, negociação e liderança | Fora do projeto: leitura livre, quando quiser |
+
+**T22 · Projetando Aplicações com Uso Intensivo de Dados (Kleppmann e Riccomini, 2ª ed.)**: entra quando o dado fica sério.
+
+| Cap. | Assunto | Lido no item |
+|---|---|---|
+| 2 | Requisitos não funcionais (latência, percentis) | 1.7 |
+| 3, 4 e 8 | Modelos de dados, armazenamento, **transações** | 1.3 |
+| 9 | Problemas com sistemas distribuídos | 1.4 (redes) e 3.3 |
+| 1 | Trade-offs, nuvem x auto-hospedagem | 2.x |
+| 5 | Codificação e evolução | 3.2 |
+| 10 | Consistência e consenso | 3.3, 3.7 e 6.2 |
+| 12 | Processamento de fluxos (CDC, event sourcing) | 3.4, 4.1 e 6.1 |
+| 11 | Processamento em lote | 3.6 |
+| 6 | Replicação | 4.6 |
+| 7 | Sharding | 6.3 |
+| 13 e 14 | A filosofia do streaming; fazer a coisa certa | 9.2 |
 
 ---
 
-## 8. Lacunas: trilhas que faltam
+## 8. Lacunas
 
-Situação na v2, depois dos livros e dos cursos de Meus arquivos:
+**Situação v3: nenhuma lacuna aberta.** As que existiam viraram as trilhas T36 a T44 (roteiro pronto, conteúdo a encaixar).
 
-| # | Lacuna | Situação v2 | O que ainda falta |
-|---|---|---|---|
-| 1 | Git e GitHub | ◐ **T25 › 3 Git e GitHub** cobre o uso | O "Git por dentro" (objetos, refs, hooks) da 2.5 |
-| 2 | Domínio bancário e PIX | ✖ | Partidas dobradas, plano de contas, PIX (ISPB, DICT, SPI, MED), conciliação. **Alta** |
-| 3 | PostgreSQL a fundo | ◐ **T22 cap. 8** (isolamento, anomalias) e **T33** | O Postgres em si: MVCC, EXPLAIN, locks, replicação. Conferir o que a T33 cobre. **Crítica** |
-| 4 | Autenticação e autorização | ✖ (candidato: T19 › Segurança de APIs) | Sessões x JWT, OAuth2/OIDC, RBAC/ABAC. **Alta** |
-| 5 | Docker e contêineres a fundo | ✔ **T25 › 10 Docker**, **T34 › 012** | Só a segurança de sandbox (seccomp, capabilities) da 7.4 |
-| 6 | Microsserviços | ✔ **T32**, **T21 cap. 18**, **T23 cap. 14**, T29 | — |
-| 7 | Testes de software | ◐ T24 › 08 Testing | TDD, testcontainers, testes de propriedade e de contrato (candidato: T19 › Testes Automatizados) |
-| 8 | Observabilidade na prática | ✔ **T35**, **T25 › 30 e 34** | — |
-| 9 | Virtualização e orquestração | ◐ orquestração ✔ (**T25**, **T34**) | Virtualização (KVM, API do Proxmox, Firecracker) |
-| 10 | Bancos e brokers por dentro | ◐ **T22 cap. 4** (teoria) e T32 › Kafka (uso) | WAL e fsync na prática |
-| 11 | Sistemas distribuídos a fundo | ✔ **T22 cap. 6 a 10** | — |
-| 12 | Mídia e streaming | ✖ | Codecs, ffmpeg, HLS/DASH, RTMP, WebRTC e SFU. Baixa (fases 7 e 8) |
-| 13 | Frontend por dentro | ✖ | JS/TS, navegador, o mini React. Baixa |
-| 14 | **Rust** (+ C++ para comparar) | ✖ | Ownership, borrowing, lifetimes, smart pointers; o C++ só para comparar RAII e comportamento indefinido. Ver o item 6.4 |
-| 15 | IaC | ✔ **T25 › 35 Terraform**, **T34 › 022** | — (nova linha na v2) |
+| # | Lacuna | Coberta por |
+|---|---|---|
+| 1 | Git e GitHub (uso e por dentro) | T40 · T25 › 3 |
+| 2 | Domínio bancário e PIX | T38 |
+| 3 | PostgreSQL a fundo | T37 · T22 cap. 8 · T33 |
+| 4 | Autenticação e autorização | T39 |
+| 5 | Docker e contêineres a fundo | T25 › 10 · T34 › 012 · T41 › Contêineres por dentro |
+| 6 | Microsserviços | T32 · T21 cap. 18 · T23 cap. 14 |
+| 7 | Testes de software | T42 |
+| 8 | Observabilidade na prática | T41 · T35 · T25 › 30 e 34 |
+| 9 | Virtualização e orquestração | T41 · T25 · T34 |
+| 10 | Bancos e brokers por dentro | T37 › Por dentro de um banco · T22 cap. 4 e 12 |
+| 11 | Sistemas distribuídos a fundo | T22 cap. 6 a 10 |
+| 12 | Mídia e streaming | T43 |
+| 13 | Frontend por dentro | T44 |
+| 14 | Rust (+ C++ para comparar) | T36 (trilha paralela R1 a R4) |
+| 15 | IaC | T41 · T25 › 35 · T34 › 022 |
+| 16 | DevOps e SRE | T41 · T40 · T35 |
 
-**Ainda a conferir pelas aulas:** os candidatos da T19 (Full Cycle 4.0, catálogo) e da T20 (Tech Leads Club) continuam valendo para as lacunas 1, 3, 4, 7 e 9. Trocar ✖ por ✔ só depois de conferir as aulas.
-
-**O que já existe, mas está raso para este uso:**
-- **T18:** só os módulos 0 a 3 têm etapas. Os passos com ⏳ ganham profundidade conforme você cola as aulas.
-- **T1 Home lab: rede:** ainda é rascunho. Ela é usada na 2.3 e na 5.5.
-- **T21:** o sumário foi montado de memória. Conferir com a foto do livro.
+**O que ainda é raso:**
+- **T36 a T44** nasceram só com o roteiro: o conteúdo de cada etapa entra quando o item chegar nela (lição gerada ou material encaixado).
+- **T18:** só os módulos 0 a 3 têm etapas. Os ⏳ ganham profundidade conforme você cola as aulas.
+- **T1 Home lab: rede:** ainda é rascunho (usada na 2.3 e na 5.5).
+- Os cursos da T19 (Full Cycle 4.0) e da T20 (Tech Leads) podem substituir o conteúdo das trilhas de roteiro quando forem baixados.
 
 ---
 
 ## 9. Ordem sugerida das primeiras semanas
 
-1. **T23 cap. 1 e 2** + **T21 cap. 1 e 2** (por que domínio e arquitetura vêm antes) + **T13 › Fundamentos** → **0.1** (repositório no ar, primeiro ADR)
-2. **T10 › Números e bits** + **T23 cap. 5 e 6** + **T9 › Value objects** → **0.2** (Dinheiro)
-3. **T9 › Por que DDD** + **T9 › Tático I** + **T13 › Tipos compostos e Métodos** → **0.3** (Razão)
-4. **T13 › Concorrência** + **T24 › 10 Multithreading** → **0.4** (mil transferências)
-5. **T18 › M1** (você já está nele) + **T13 › Biblioteca padrão e APIs HTTP** → **1.1** (API)
-6. **T21 cap. 3 e 10** + **T23 cap. 8** + **T9 › Arquitetura hexagonal** → **1.2** (a primeira evolução de arquitetura: A0 → A1)
-7. **T22 cap. 8** + **T33** + **T18 › M3 (ACID)** + **T13 › database/sql** → **1.3**
+1. **T23 cap. 1 e 2** + **T21 cap. 1, 2 e 21** + **T40 › Git no dia a dia** + **T13 › Fundamentos** → **0.1**
+2. **T10 › Números e bits** + **T23 cap. 5 e 6** + **T42 › Fundamentos** → **0.2** (Dinheiro)
+3. **T38 › Contabilidade para quem programa** + **T9 › Tático I** + **T13 › Tipos compostos e Métodos** → **0.3** (Razão)
+4. **T13 › Concorrência** + **T24 › 10 Multithreading** → **0.4**
+5. **T18 › M1** + **T13 › Biblioteca padrão e APIs HTTP** + **T21 cap. 10** → **1.1** (API)
+6. **T21 cap. 3** + **T23 cap. 8** + **T9 › Arquitetura hexagonal** → **1.2** (a primeira evolução de arquitetura: A0 → A1)
+7. **T22 cap. 3, 4 e 8** + **T37 › Transações e concorrência** + **T18 › M3** → **1.3**
 
-A T18 segue em paralelo, um módulo por semana, e os passos ⏳ vão sendo destravados à medida que as aulas chegam.
+A T18 segue em paralelo, um módulo por semana.
 
 ---
 

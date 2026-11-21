@@ -6,8 +6,8 @@
 
 ## Próximos passos
 1. **Lucas:** revisar METODOLOGIA.md e ROADMAP.md v2 e apontar ajustes.
-2. **Lucas:** mandar a foto do sumário do *Fundamentos da Arquitetura de Software* (a trilha 21 foi montada de memória). As trilhas 22 e 23 já foram conferidas pelas fotos.
-3. **IA:** construir a aba Projeto na Trilha (METODOLOGIA §6), depois de o Lucas escolher o nome e onde os documentos vão morar.
+2. **Lucas:** confirmar se o caderno vai para um repositório **público** no GitHub (é por lá que a Trilha vai ler).
+3. **IA:** construir a aba **Projeto de estudo** na Trilha (METODOLOGIA §6).
 4. **Primeiro item:** 0.1 · O repositório e o ambiente.
 
 ## Pendências fora do projeto

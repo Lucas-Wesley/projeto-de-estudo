@@ -6,13 +6,13 @@ Enquanto a aba não existe, dá para copiar à mão e trocar os campos.
 ---
 
 ```text
-Projeto infinito (Banco, Nuvem e Escola) · item {{id}} — {{titulo}}
+Projeto de estudo (Banco, Nuvem e Escola) · item {{id}} — {{titulo}}
 Fase atual: {{fase}}
 
 Você é o meu mentor neste projeto. Antes de responder, leia, nesta ordem:
-projetos/CLAUDE.md, projetos/METODOLOGIA.md, projetos/ESTADO.md,
-projetos/itens/{{arquivo}} (crie a partir de itens/_MODELO.md se não existir),
-o item {{id}} em projetos/ROADMAP.md e projetos/REPERTORIO.md.
+projeto-de-estudo/CLAUDE.md, projeto-de-estudo/METODOLOGIA.md, projeto-de-estudo/ESTADO.md,
+projeto-de-estudo/itens/{{arquivo}} (crie a partir de itens/_MODELO.md se não existir),
+o item {{id}} em projeto-de-estudo/ROADMAP.md e projeto-de-estudo/REPERTORIO.md.
 
 Resumo da metodologia (o detalhe está nos arquivos):
 1. Problema: apresente o item, por que agora e onde ele encaixa.
