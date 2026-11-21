@@ -874,14 +874,14 @@ Somam-se ao "Estudar antes" de cada item. Livro sempre por **capítulo**, nunca 
 | **7.4 e 7.5** Juiz | T21 cap. 12 (pipeline) | **T39 › Sandbox** · T26 e T11 (os problemas) |
 | **7.6 e 8.x** Vídeo e ao vivo | T21 cap. 15 e 16 | **T43** inteira · T30 › Lab Netflix · T34 › 021 Edge · **T44 › Tempo real** (WebSocket do chat, 8.1); **WebRTC no navegador** (8.2) |
 | **Interfaces** (painéis da Nuvem e da Escola) | — | Periférico: a IA escreve e você revisa (decisão P5). Sem framework próprio nem CSS como estudo |
-| **9.1** AWS | — | T34 › 018 e 022 · T25 › 35 · T40 › CI/CD (OIDC) |
+| **9.1** AWS | — | T34 › 018 e 022 · T25 › 35 · T40 › CI com GitHub Actions (OIDC) |
 | **9.2** Arquitetura defendida | **T21 cap. 22, 23, 25, 26 e 27** · T22 cap. 13 e 14 · T23 cap. 16 e 17 | T29 › 005 Solution Architecture Document · T30 › Design Docs |
 
 ### 7.2 Os livros, capítulo por capítulo
 
 A ordem em que cada capítulo aparece no projeto. É assim que os livros são lidos: aos pedaços, quando o item pede.
 
-**Os 58 capítulos estão encaixados** (27 + 14 + 18 — nenhum fica de fora). Quando o projeto terminar, os três livros estarão lidos inteiros. Alguns capítulos aparecem em mais de um item: a primeira vez é a leitura, as outras são revisão.
+**Os 59 capítulos estão encaixados** (27 + 14 + 18 — nenhum fica de fora). Quando o projeto terminar, os três livros estarão lidos inteiros. Alguns capítulos aparecem em mais de um item: a primeira vez é a leitura, as outras são revisão.
 
 **T23 · Aprenda Domain-Driven Design (Khononov)**: abre o projeto e volta a cada domínio novo.
 
@@ -993,7 +993,7 @@ O projeto tem fim. Ele termina quando **as duas condições** forem verdade:
 Para isso não escapar no caminho:
 - Todo fechamento de item confere se os capítulos de livro daquele item foram marcados na Trilha (METODOLOGIA §3.8).
 - **Material novo nunca empurra um capítulo para fora.** Um vídeo, uma tecnologia ou um curso que você mandar entra como fonte extra de um item, ou vira um item novo, mas os capítulos continuam onde estão (METODOLOGIA §8).
-- Se o roadmap mudar e um item sair, os capítulos dele vão para o item mais próximo. A tabela 7.2 sempre cobre os 58 capítulos.
+- Se o roadmap mudar e um item sair, os capítulos dele vão para o item mais próximo. A tabela 7.2 sempre cobre os 59 capítulos.
 
 ---
 
