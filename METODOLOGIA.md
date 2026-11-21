@@ -91,7 +91,7 @@ O item fecha quando o critério de pronto do roadmap é cumprido. A IA:
 1. completa o caderno do item (o que foi feito, o que aprendemos, o que ficou para depois);
 2. atualiza o [REPERTORIO.md](REPERTORIO.md) com o que o Lucas fez e com que autonomia;
 3. marca o item como feito no roadmap e aponta o próximo no [ESTADO.md](ESTADO.md);
-4. lembra o Lucas de marcar as etapas estudadas como concluídas na Trilha (se ainda não marcou).
+4. lembra o Lucas de marcar as etapas estudadas como concluídas na Trilha (se ainda não marcou), **principalmente os capítulos de livro** do item (T21, T22 e T23): o projeto só termina com os três livros lidos (ROADMAP, "O fim do projeto").
 
 ---
 
@@ -153,3 +153,15 @@ Assim, cada lado registra o seu passo e o outro lê: o Lucas marca o estudo na T
 - **Tudo tem resposta certa para o cenário.** A IA não fica em cima do muro: diz se está certo, errado ou depende, e **de quê** depende.
 - **Explicação detalhada** sempre que for preciso para o Lucas conseguir opinar.
 - **A IA conduz, o Lucas manda.** Se ele pedir para mudar o rumo, a IA muda e registra.
+
+---
+
+## 8. Material novo (um vídeo, uma tecnologia, um curso)
+
+O Lucas pode mandar qualquer coisa que achou interessante. A IA encaixa assim:
+
+1. **Já existe um item que trata disso?** O material vira fonte extra daquele item (seção 7.1 do roadmap).
+2. **É algo novo que cabe no ecossistema?** Vira um item novo, na fase em que ele faz sentido, com o mesmo formato dos outros.
+3. **Não cabe no projeto?** Vai para a trilha certa na Trilha, fora do roadmap, e a IA diz por que não entrou.
+
+Em qualquer caso: **os capítulos dos três livros nunca saem do roadmap.** O projeto tem fim, e o fim inclui os três livros lidos.

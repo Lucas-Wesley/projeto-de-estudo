@@ -869,17 +869,19 @@ Somam-se ao "Estudar antes" de cada item. Livro sempre por **capítulo**, nunca 
 | **6.2** Raft | **T22 cap. 10** | — |
 | **6.3** Consistent hashing | **T22 cap. 7** | T37 › Escala · T30 |
 | **6.4** Rust | — | T36 › Baixo nível |
-| **7.1** Domínio da Escola | T23 cap. 10, 13 e 18 · T21 cap. 19 | T31 · T28 |
+| **7.1** Domínio da Escola | T23 cap. 10, 13 e 18 · T21 cap. 19 e 24 | T31 · T28 |
 | **7.3** Pagar com PIX | — | T38 › PIX (QR dinâmico, devolução) · T39 › Segurança de APIs |
 | **7.4 e 7.5** Juiz | T21 cap. 12 (pipeline) | **T39 › Sandbox** · T26 e T11 (os problemas) |
 | **7.6 e 8.x** Vídeo e ao vivo | T21 cap. 15 e 16 | **T43** inteira · T30 › Lab Netflix · T34 › 021 Edge |
 | **Painel da Nuvem e da Escola** | — | **T44** (quando chegar a hora da interface) |
 | **9.1** AWS | — | T34 › 018 e 022 · T25 › 35 · T40 › CI/CD (OIDC) |
-| **9.2** Arquitetura defendida | **T21 cap. 22, 23, 26 e 27** · T22 cap. 13 e 14 · T23 cap. 16 e 17 | T29 › 005 Solution Architecture Document · T30 › Design Docs |
+| **9.2** Arquitetura defendida | **T21 cap. 22, 23, 25, 26 e 27** · T22 cap. 13 e 14 · T23 cap. 16 e 17 | T29 › 005 Solution Architecture Document · T30 › Design Docs |
 
 ### 7.2 Os livros, capítulo por capítulo
 
 A ordem em que cada capítulo aparece no projeto. É assim que os livros são lidos: aos pedaços, quando o item pede.
+
+**Os 58 capítulos estão encaixados** (27 + 14 + 18 — nenhum fica de fora). Quando o projeto terminar, os três livros estarão lidos inteiros. Alguns capítulos aparecem em mais de um item: a primeira vez é a leitura, as outras são revisão.
 
 **T23 · Aprenda Domain-Driven Design (Khononov)**: abre o projeto e volta a cada domínio novo.
 
@@ -915,7 +917,8 @@ A ordem em que cada capítulo aparece no projeto. É assim que os livros são li
 | 12 | Pipeline | 7.4 |
 | 16 | Baseado em espaço | 8.x |
 | 26 e 27 | Interseções e as leis revisitadas | 9.2 |
-| 24 e 25 | Equipes eficazes, negociação e liderança | Fora do projeto: leitura livre, quando quiser |
+| 24 | Tornando as equipes eficazes (limites, listas de verificação) | 7.1 (a Escola tem vários contextos, como se fossem times) |
+| 25 | Negociação e liderança | 9.2 (defender a arquitetura é negociar) |
 
 **T22 · Projetando Aplicações com Uso Intensivo de Dados (Kleppmann e Riccomini, 2ª ed.)**: entra quando o dado fica sério.
 
@@ -977,6 +980,20 @@ A ordem em que cada capítulo aparece no projeto. É assim que os livros são li
 7. **T22 cap. 3, 4 e 8** + **T37 › Transações e concorrência** + **T18 › M3** → **1.3**
 
 A T18 segue em paralelo, um módulo por semana.
+
+---
+
+## 9b. O fim do projeto
+
+O projeto tem fim. Ele termina quando **as duas condições** forem verdade:
+
+1. **O item 9.2 está fechado**: o ecossistema (Banco, SPI, Nuvem e Escola) rodando, e a arquitetura defendida num design doc.
+2. **Os três livros estão lidos inteiros**: as trilhas T21, T22 e T23 com 100% das etapas concluídas na Trilha.
+
+Para isso não escapar no caminho:
+- Todo fechamento de item confere se os capítulos de livro daquele item foram marcados na Trilha (METODOLOGIA §3.8).
+- **Material novo nunca empurra um capítulo para fora.** Um vídeo, uma tecnologia ou um curso que você mandar entra como fonte extra de um item, ou vira um item novo, mas os capítulos continuam onde estão (METODOLOGIA §8).
+- Se o roadmap mudar e um item sair, os capítulos dele vão para o item mais próximo. A tabela 7.2 sempre cobre os 58 capítulos.
 
 ---
 
