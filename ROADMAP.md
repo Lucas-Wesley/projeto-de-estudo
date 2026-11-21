@@ -141,7 +141,7 @@ As **pausadas** são fontes que o projeto puxa quando um item pede: não entram 
 | **T41** | **Plataforma, SRE e virtualização** (a parte de DevOps que faltava) | roteiro | pausada |
 | **T42** | **Testes de software** | roteiro | pausada |
 | **T43** | **Mídia e streaming** | roteiro | pausada |
-| **T44** | **Frontend por dentro** | roteiro | pausada |
+| **T44** | **Frontend para quem é do backend** (só requisições, CORS e cookies, SSE, WebSocket e WebRTC no navegador) | roteiro | pausada |
 
 As de **roteiro** (T36 a T44) seguem o padrão das trilhas 8 a 15: cada etapa diz o que aprender e como praticar, cada módulo fecha com um projeto, e o conteúdo entra depois (lição gerada ou "Encaixar material"), da melhor fonte. Vários projetos de módulo **são** itens deste roadmap (o Dinheiro em Rust, o esquema do Banco, o gatilho do git push, o sandbox do juiz).
 
@@ -841,11 +841,11 @@ Somam-se ao "Estudar antes" de cada item. Livro sempre por **capítulo**, nunca 
 | **1.2** Hexagonal | T21 cap. 3 (modularidade) · T23 cap. 8 (portas e adaptadores) | T29 › 010 Hexagonal e Clean · T24 › 20 Clean Architecture · T27 · T29 › 008 SOLID |
 | **1.3** Postgres | **T22 cap. 3, 4 e 8** (modelos, armazenamento, **transações e isolamento**) | **T37 › Modelagem; SQL além do CRUD; Índices e planos; Transações e concorrência** · T33 · T24 › 06, 17 SQLC, 18 UOW · T42 › Testcontainers |
 | **1.4** Idempotência | T22 cap. 9 (redes não confiáveis) | T32 › Bônus · Comunicação e resiliência |
-| **1.5** Autenticação | — | **T39 › Fundamentos; Sessões e tokens** |
+| **1.5** Autenticação | — | **T39 › Fundamentos; Sessões e tokens** · T44 › HTTP a partir do navegador (CORS e cookies) |
 | **1.6** Serviço | — | T24 › 05 Context; 21 Deploy · T25 › 10 Docker · T34 › 012 |
 | **1.7** Observabilidade | T22 cap. 2 (percentis) · T21 cap. 4, 5 e 6 (características e funções de aptidão) | **T41 › SRE; Observabilidade na prática** · T35 › 019 · T25 › 30 e 34 |
 | **R1** Primeiro Rust | — | **T36 › módulos 1 a 3** |
-| **2.1 a 2.6** Nuvem v0.1 | T22 cap. 1 (nuvem x auto-hospedagem) · T21 cap. 13 (microkernel: a CLI e o agente) | **T40 › Git por dentro** (2.5) · T41 › Contêineres por dentro (2.1) · T25 › 10 e 33 · T24 › 16 Cobra CLI (2.6) |
+| **2.1 a 2.6** Nuvem v0.1 | T22 cap. 1 (nuvem x auto-hospedagem) · T21 cap. 13 (microkernel: a CLI e o agente) | **T40 › Git por dentro** (2.5) · T41 › Contêineres por dentro (2.1) · T25 › 10 e 33 · T24 › 16 Cobra CLI (2.6) · **T44 › Tempo real** (SSE dos logs ao vivo, 2.6) |
 | **2.7** Blue/green | — | T40 › Entrega contínua · T25 › 29 Estratégias de deploy |
 | **3.1** Domínio do PIX | **T23 cap. 3, 4 e 12** · T21 cap. 8, 11 e 23 (componentes, monólito modular, diagramas C4) | **T38 › O sistema de pagamentos; PIX** · T20 › Event Storming · T31 › Core Domain · T29 › Encontros › MDL e C4 |
 | **3.2** SPI e gRPC | T22 cap. 5 (codificação e evolução) · T21 cap. 9 (as falácias) | T24 › 14 gRPC · T39 › Segurança de APIs (mTLS) · T42 › Contratos |
@@ -872,8 +872,8 @@ Somam-se ao "Estudar antes" de cada item. Livro sempre por **capítulo**, nunca 
 | **7.1** Domínio da Escola | T23 cap. 10, 13 e 18 · T21 cap. 19 e 24 | T31 · T28 |
 | **7.3** Pagar com PIX | — | T38 › PIX (QR dinâmico, devolução) · T39 › Segurança de APIs |
 | **7.4 e 7.5** Juiz | T21 cap. 12 (pipeline) | **T39 › Sandbox** · T26 e T11 (os problemas) |
-| **7.6 e 8.x** Vídeo e ao vivo | T21 cap. 15 e 16 | **T43** inteira · T30 › Lab Netflix · T34 › 021 Edge |
-| **Painel da Nuvem e da Escola** | — | **T44** (quando chegar a hora da interface) |
+| **7.6 e 8.x** Vídeo e ao vivo | T21 cap. 15 e 16 | **T43** inteira · T30 › Lab Netflix · T34 › 021 Edge · **T44 › Tempo real** (WebSocket do chat, 8.1); **WebRTC no navegador** (8.2) |
+| **Interfaces** (painéis da Nuvem e da Escola) | — | Periférico: a IA escreve e você revisa (decisão P5). Sem framework próprio nem CSS como estudo |
 | **9.1** AWS | — | T34 › 018 e 022 · T25 › 35 · T40 › CI/CD (OIDC) |
 | **9.2** Arquitetura defendida | **T21 cap. 22, 23, 25, 26 e 27** · T22 cap. 13 e 14 · T23 cap. 16 e 17 | T29 › 005 Solution Architecture Document · T30 › Design Docs |
 
@@ -956,7 +956,7 @@ A ordem em que cada capítulo aparece no projeto. É assim que os livros são li
 | 10 | Bancos e brokers por dentro | T37 › Por dentro de um banco · T22 cap. 4 e 12 |
 | 11 | Sistemas distribuídos a fundo | T22 cap. 6 a 10 |
 | 12 | Mídia e streaming | T43 |
-| 13 | Frontend por dentro | T44 |
+| 13 | O frontend que o backend exige | T44 (o resto do frontend ficou fora de propósito: P5) |
 | 14 | Rust (+ C++ para comparar) | T36 (trilha paralela R1 a R4) |
 | 15 | IaC | T41 · T25 › 35 · T34 › 022 |
 | 16 | DevOps e SRE | T41 · T40 · T35 |
