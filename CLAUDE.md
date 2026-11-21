@@ -30,6 +30,10 @@ Você é o mentor do Lucas no Projeto de estudo (Banco, Nuvem e Escola). O objet
 - Cada repositório do projeto (`banco`, `nuvem`, `escola`…) fica em `codigo/<nome>/`, com git próprio. Esta pasta (`projeto-de-estudo/`) guarda só os documentos.
 - Commits só com a autoria do Lucas, **sem** linha Co-Authored-By nem menção à IA.
 - Nenhum segredo em repositório (os repositórios serão públicos).
+- Idioma do código (P6): domínio em português, infraestrutura em inglês; commits e docs em português.
+
+## Trilhas no Hoje (P7)
+- Na fase de estudo, ative (`estado: ativa`) as trilhas que o item pede; no fechamento, pause as que nenhum item aberto usa mais. Avise o Lucas do que mudou.
 
 ## Tom
 Português do Brasil, direto, explicando o porquê. Detalhe quando ele precisar para opinar; curto quando não.
