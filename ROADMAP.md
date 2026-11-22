@@ -1049,36 +1049,7 @@ Onde cada capítulo é **usado** no projeto: a releitura aplicada. A leitura em 
 **T23 · Aprenda Domain-Driven Design (Khononov)**: abre o projeto e volta a cada domínio novo.
 
 | Cap. | Assunto | Lido no item |
-|### 7.3 A faixa de leitura (os livros em ordem)
-
-Os três livros são lidos **na ordem do autor**, numa faixa própria, ao lado dos itens: mais ou menos **um capítulo por semana**, intercalando os livros para cada bloco chegar perto do item que vai usá-lo. A IA lembra o próximo capítulo na abertura da sessão (METODOLOGIA §3.0), e o capítulo lido é marcado na trilha do livro (T21, T22 ou T23).
-
-Se um item precisar de um capítulo que a faixa ainda não alcançou (ex.: o 1.2 pede o cap. 8 do Kleppmann), ele é lido ali como **consulta**, só a parte que o item usa, e lido inteiro quando a faixa chegar.
-
-| # | Leitura (em ordem) | De preferência antes de |
 |---|---|---|
-| 1 | T23 cap. 1 a 6 (o domínio e a lógica de negócio) | 0.3 |
-| 2 | T21 cap. 1 a 3 (arquitetura, trade-offs, modularidade) | Fase 1 |
-| 3 | T22 cap. 1 a 4 (trade-offs, requisitos, modelos de dados, armazenamento) | 1.2 |
-| 4 | T23 cap. 7 e 8 (o tempo; padrões de arquitetura) | 1.3 |
-| 5 | T21 cap. 4 a 6 (características e funções de aptidão) | 1.7 |
-| 6 | T21 cap. 7 a 10 (quantum, componentes, falácias, camadas) | Fase 2 |
-| 7 | T22 cap. 5 (codificação e evolução) | 3.2 |
-| 8 | T22 cap. 6 a 10 (replicação, sharding, transações, problemas distribuídos, consenso) | 3.5 |
-| 9 | T23 cap. 9 a 12 (comunicação, heurísticas, evoluir o design, EventStorming) | fim da Fase 3 |
-| 10 | T21 cap. 11 a 13 (pipeline, monólito modular, microkernel) | Fase 4 |
-| 11 | T22 cap. 11 e 12 (lote e fluxos) | Fase 4 |
-| 12 | T21 cap. 14 a 19 (estilos distribuídos e como escolher) | 4.5 |
-| 13 | T23 cap. 13 e 14 (DDD no mundo real; microsserviços) | 4.5 |
-| 14 | T21 cap. 20 a 23 (padrões, ADRs, risco, diagramas) | Fase 5 |
-| 15 | T23 cap. 15 e 16 (eventos; malha de dados) | Fase 6 |
-| 16 | T21 cap. 24 a 27 (equipes, negociação, interseções, leis) | Fase 7 |
-| 17 | T22 cap. 13 e 14 (streaming; fazer a coisa certa) | Fase 8 |
-| 18 | T23 cap. 17 e 18 (palavras finais; estudo de caso) | Fase 9 |
-
-Conta: T23 = 18 capítulos, T21 = 27, T22 = 14. Total: **59**.
-
----|---|---|
 | 1 e 2 | Domínios, subdomínios e linguagem ubíqua | 0.3 |
 | 5 e 6 | Lógica simples x modelo de domínio | 0.2 |
 | 8 | Padrões de arquitetura (portas e adaptadores, CQRS) | 1.3 (e revisto em 4.1) |
@@ -1127,6 +1098,35 @@ Conta: T23 = 18 capítulos, T21 = 27, T22 = 14. Total: **59**.
 | 6 | Replicação | 4.6 |
 | 7 | Sharding | 6.3 |
 | 13 e 14 | A filosofia do streaming; fazer a coisa certa | 9.2 |
+
+### 7.3 A faixa de leitura (os livros em ordem)
+
+Os três livros são lidos **na ordem do autor**, numa faixa própria, ao lado dos itens: mais ou menos **um capítulo por semana**, intercalando os livros para cada bloco chegar perto do item que vai usá-lo. A IA lembra o próximo capítulo na abertura da sessão (METODOLOGIA §3.0), e o capítulo lido é marcado na trilha do livro (T21, T22 ou T23).
+
+Se um item precisar de um capítulo que a faixa ainda não alcançou (ex.: o 1.2 pede o cap. 8 do Kleppmann), ele é lido ali como **consulta**, só a parte que o item usa, e lido inteiro quando a faixa chegar.
+
+| # | Leitura (em ordem) | De preferência antes de |
+|---|---|---|
+| 1 | T23 cap. 1 a 6 (o domínio e a lógica de negócio) | 0.3 |
+| 2 | T21 cap. 1 a 3 (arquitetura, trade-offs, modularidade) | Fase 1 |
+| 3 | T22 cap. 1 a 4 (trade-offs, requisitos, modelos de dados, armazenamento) | 1.2 |
+| 4 | T23 cap. 7 e 8 (o tempo; padrões de arquitetura) | 1.3 |
+| 5 | T21 cap. 4 a 6 (características e funções de aptidão) | 1.7 |
+| 6 | T21 cap. 7 a 10 (quantum, componentes, falácias, camadas) | Fase 2 |
+| 7 | T22 cap. 5 (codificação e evolução) | 3.2 |
+| 8 | T22 cap. 6 a 10 (replicação, sharding, transações, problemas distribuídos, consenso) | 3.5 |
+| 9 | T23 cap. 9 a 12 (comunicação, heurísticas, evoluir o design, EventStorming) | fim da Fase 3 |
+| 10 | T21 cap. 11 a 13 (pipeline, monólito modular, microkernel) | Fase 4 |
+| 11 | T22 cap. 11 e 12 (lote e fluxos) | Fase 4 |
+| 12 | T21 cap. 14 a 19 (estilos distribuídos e como escolher) | 4.5 |
+| 13 | T23 cap. 13 e 14 (DDD no mundo real; microsserviços) | 4.5 |
+| 14 | T21 cap. 20 a 23 (padrões, ADRs, risco, diagramas) | Fase 5 |
+| 15 | T23 cap. 15 e 16 (eventos; malha de dados) | Fase 6 |
+| 16 | T21 cap. 24 a 27 (equipes, negociação, interseções, leis) | Fase 7 |
+| 17 | T22 cap. 13 e 14 (streaming; fazer a coisa certa) | Fase 8 |
+| 18 | T23 cap. 17 e 18 (palavras finais; estudo de caso) | Fase 9 |
+
+Conta: T23 = 18 capítulos, T21 = 27, T22 = 14. Total: **59**.
 
 ---
 
