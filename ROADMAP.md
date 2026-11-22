@@ -1027,7 +1027,7 @@ Somam-se ao "Estudar antes" de cada item. Na coluna dos livros está o capítulo
 | **4.6** Réplica | **T22 cap. 6** | **T37 › Durabilidade e replicação** · T41 › Backup e DR |
 | **4.7** Motor de armazenamento | **T22 cap. 4** (estruturas de armazenamento) | **T46** inteira · T37 › Por dentro de um banco · T11 › Árvores de busca |
 | **R3** A memória comparada | — | **T36 › módulos 6 e 7** (inclui o C++) |
-| **5.1 a 5.7** Nuvem v0.2 | T21 cap. 15 · T22 cap. 6 | **T41 › Virtualização; Orquestração por dentro; IaC** · **T39 › Autorização** (5.4) · T37 › Operação (5.1) · T34 › 018 e 022 · T24 › 15 Upload S3 |
+| **5.1 a 5.7** Nuvem v0.2 | T21 cap. 15 · T22 cap. 6 | **T41 › Virtualização; Orquestração por dentro; Infraestrutura como código** · **T39 › Autorização** (5.4) · T37 › Operação (5.1) · T34 › 018 e 022 · T24 › 15 Upload S3 |
 | **5.8** Kubernetes | — | T25 · T34 · T40 › GitOps |
 | **R4** Concorrência e baixo nível | — | **T36 › módulos 8 e 9** |
 | **6.1** Broker | **T22 cap. 4 e 12** | T37 › Por dentro de um banco · T32 › 016 Kafka · **T45 › Katas com o Maelstrom (Gossip Glomers); Ler código de produção** |
