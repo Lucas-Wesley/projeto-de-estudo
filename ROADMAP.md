@@ -54,6 +54,7 @@ Sem português e inglês, a Escola perderia parte do motivo de existir. O Banco 
 | T14 AWS para engenharia | ◐ | ● | ◐ |
 | T15 System Design | ● | ● | ● |
 | T18 System Design T4 | ● | ● | ● |
+| T48 Clean Code e Clean Architecture (Branas.io) | ● | ◐ | ● |
 
 ● muito usada · ◐ usada em parte · ○ pouco
 
@@ -148,6 +149,7 @@ Todas na Trilha (https://trilha.internal). A IA consulta o progresso por `GET /a
 | **T45** | **Sistemas distribuídos na prática** (Gossip Glomers, Raft com os labs do MIT 6.5840, ler código de produção, Jepsen e TLA+) | roteiro |
 | **T46** | **Bancos de dados por dentro: o motor** (páginas, buffer pool, B+tree e LSM, execução, MVCC, WAL e recuperação) | roteiro |
 | **T47** | **Design de APIs e contratos** (erros RFC 9457, paginação, versionamento, compatibilidade, webhooks) | roteiro |
+| T48 | Clean Code e Clean Architecture (Branas.io: testes e TDD, refactoring, hexagonal, Clean Architecture, DDD tático e estratégico, microservices, eventos, CQRS) | curso (aulas baixadas sob demanda) |
 
 As de **roteiro** (T36 a T47) seguem o padrão das trilhas 8 a 15: cada etapa diz o tópico e como praticar, e cada módulo fecha com um projeto. O material entra na hora do estudo (P10). Vários projetos de módulo **são** itens deste roadmap (o Dinheiro em Rust, o esquema do Banco, o gatilho do git push, o sandbox do juiz).
 
@@ -998,12 +1000,12 @@ Somam-se ao "Estudar antes" de cada item. Na coluna dos livros está o capítulo
 | Item | Livros (capítulos) | Trilhas e cursos |
 |---|---|---|
 | **0.1** Repositório | T21 cap. 1, 2 e 21 (o que é arquitetura; o ADR desde o primeiro dia) | T40 › Git no dia a dia; Colaboração no GitHub · T24 › 01 e 02 · **T40 › CI com GitHub Actions** |
-| **0.2** Dinheiro | T23 cap. 5 e 6 (lógica simples x modelo de domínio; objetos de valor) | T42 › Fundamentos · T24 › 03 Fundação; 08 Testing · T31 e T28 (objetos de valor) |
-| **0.3** Razão | T23 cap. 1 e 2 (subdomínios, linguagem ubíqua) | **T38 › Contabilidade para quem programa; Contas e dinheiro** · T42 › TDD · T31 › Prática: Agregados |
+| **0.2** Dinheiro | T23 cap. 5 e 6 (lógica simples x modelo de domínio; objetos de valor) | T42 › Fundamentos · T24 › 03 Fundação; 08 Testing · T31 e T28 (objetos de valor) · T48 › Aula 1 › Automação de Testes e Test-Driven Development; Refactoring, Code Smells e Técnicas de Refactoring · T48 › Aula 4 › Domain-Driven Design: Value Objects |
+| **0.3** Razão | T23 cap. 1 e 2 (subdomínios, linguagem ubíqua) | **T38 › Contabilidade para quem programa; Contas e dinheiro** · T42 › TDD · T31 › Prática: Agregados · T48 › Aula 4 › Domain-Driven Design: Entities; Domain-Driven Design: Aggregates; Domain-Driven Design: Domain Services |
 | **0.4** Concorrência | — | T24 › 10 Multithreading · T42 › Propriedades e fuzzing |
-| **1.1** API | T21 cap. 10 (camadas) | T24 › 04 e 09 APIs · T42 › Integração (testes de API) · **T47 › Desenhar uma API HTTP** |
-| **1.2** Postgres | **T22 cap. 3, 4 e 8** (modelos, armazenamento, **transações e isolamento**) | **T37 › Modelagem; SQL além do CRUD; Índices e planos; Transações e concorrência** · T33 · T24 › 06, 17 SQLC, 18 UOW · T42 › Testcontainers |
-| **1.3** Hexagonal | T21 cap. 3 (modularidade) · T23 cap. 8 (portas e adaptadores) | T29 › 010 Hexagonal e Clean · T24 › 20 Clean Architecture · T27 · T29 › 008 SOLID |
+| **1.1** API | T21 cap. 10 (camadas) | T24 › 04 e 09 APIs · T42 › Integração (testes de API) · **T47 › Desenhar uma API HTTP** · T48 › Aula 2 › Tipos de testes automatizados (E2E, Integration, Unit); Test Patterns |
+| **1.2** Postgres | **T22 cap. 3, 4 e 8** (modelos, armazenamento, **transações e isolamento**) | **T37 › Modelagem; SQL além do CRUD; Índices e planos; Transações e concorrência** · T33 · T24 › 06, 17 SQLC, 18 UOW · T42 › Testcontainers · T48 › Aula extra › ORM |
+| **1.3** Hexagonal | T21 cap. 3 (modularidade) · T23 cap. 8 (portas e adaptadores) | T29 › 010 Hexagonal e Clean · T24 › 20 Clean Architecture · T27 · T29 › 008 SOLID · T48 › Aula 2 › Arquitetura Hexagonal · T48 › Aula 3 (Clean Architecture) · T48 › Aula extra › Dependency Injection |
 | **1.4** Idempotência | T22 cap. 9 (redes não confiáveis) | T32 › Bônus · Comunicação e resiliência |
 | **1.5** Autenticação | — | **T39 › Fundamentos; Sessões e tokens** · T44 › HTTP a partir do navegador (CORS e cookies) |
 | **1.6** Serviço | — | T24 › 05 Context; 21 Deploy · T25 › 10 Docker · T34 › 012 |
@@ -1011,19 +1013,19 @@ Somam-se ao "Estudar antes" de cada item. Na coluna dos livros está o capítulo
 | **R1** Primeiro Rust | — | **T36 › módulos 1 a 3** |
 | **2.1 a 2.6** Nuvem v0.1 | T22 cap. 1 (nuvem x auto-hospedagem) · T21 cap. 13 (microkernel: a CLI e o agente) | **T40 › Git por dentro** (2.5) · T41 › Contêineres por dentro (2.1) · T25 › 10 e 33 · T24 › 16 Cobra CLI (2.6) · **T44 › Tempo real** (SSE dos logs ao vivo, 2.6) |
 | **2.7** Blue/green | — | T40 › Entrega contínua · T25 › 29 Estratégias de deploy |
-| **3.1** Domínio do PIX | **T23 cap. 3, 4 e 12** · T21 cap. 8, 11 e 23 (componentes, monólito modular, diagramas C4) | **T38 › O sistema de pagamentos; PIX** · T20 › Event Storming · T31 › Core Domain · T29 › Encontros › MDL e C4 |
+| **3.1** Domínio do PIX | **T23 cap. 3, 4 e 12** · T21 cap. 8, 11 e 23 (componentes, monólito modular, diagramas C4) | **T38 › O sistema de pagamentos; PIX** · T20 › Event Storming · T31 › Core Domain · T29 › Encontros › MDL e C4 · T48 › Aula 5 › Domain-Driven Design: modelagem estratégica (domínio, subdomínios e bounded contexts) |
 | **3.2** SPI e gRPC | T22 cap. 5 (codificação e evolução) · T21 cap. 9 (as falácias) | T24 › 14 gRPC · T39 › Segurança de APIs (mTLS) · T42 › Contratos · **T47 › Contratos e documentação** · T41 › Observabilidade na prática (OpenTelemetry) |
-| **3.3** Outbox | T23 cap. 9 e 15 · T22 cap. 12 (CDC) | T32 › 005 e 006; 016 Kafka · T24 › 11 · T37 › Replicação lógica e CDC |
+| **3.3** Outbox | T23 cap. 9 e 15 · T22 cap. 12 (CDC) | T32 › 005 e 006; 016 Kafka · T24 › 11 · T37 › Replicação lógica e CDC · T48 › Aula 6 › Event-Driven Architecture |
 | **3.4** Resiliência | — | T32 › Bônus · Comunicação e resiliência · T27 |
 | **3.5** Saga | **T22 cap. 8, 9 e 10** · T23 cap. 9 · T21 cap. 20 (orquestração x coreografia) | T32 › 008 Saga; Case Mercado Bitcoin |
 | **3.6** Caos e conciliação | T22 cap. 9 e 11 · T21 cap. 22 (risco) | **T38 › Operação financeira** · T41 › Confiabilidade (caos) |
 | **3.7** Rate limit e IDs | T22 cap. 10 (geradores de IDs e relógios lógicos) | — |
 | **R2** Rust organizado | — | **T36 › módulos 4 e 5** |
-| **4.1** CQRS | T23 cap. 8 · T21 cap. 20 · T22 cap. 3 e 12 | T32 › 007 CQRS |
+| **4.1** CQRS | T23 cap. 8 · T21 cap. 20 · T22 cap. 3 e 12 | T32 › 007 CQRS · T48 › Aula 7 › CQRS · T48 › Aula 8 › CQRS, parte 2 |
 | **4.2** Event sourcing | **T23 cap. 7** · T22 cap. 3 e 12 | — |
 | **4.3** Cache | — | T26 · T37 › Redis |
-| **4.4** Carga | T22 cap. 2 | T26 › Big-O · T42 › Desempenho · T41 › Capacidade |
-| **4.5** Extração | **T21 cap. 7, 14, 17, 18 e 19** · **T23 cap. 11 e 14** | T32 › 002 a 004 · T29 › Encontros › SOS monólito; Provocações · T30 › Bônus |
+| **4.4** Carga | T22 cap. 2 | T26 › Big-O · T42 › Desempenho · T41 › Capacidade · T48 › Aula 5 › Domain-Driven Design: modelagem tática (Mediator, Book, Load Test), parte 2 |
+| **4.5** Extração | **T21 cap. 7, 14, 17, 18 e 19** · **T23 cap. 11 e 14** | T32 › 002 a 004 · T29 › Encontros › SOS monólito; Provocações · T30 › Bônus · T48 › Aula 6 › Arquitetura de Microservices · T48 › Aula 7 › Microservices Patterns |
 | **4.6** Réplica | **T22 cap. 6** | **T37 › Durabilidade e replicação** · T41 › Backup e DR |
 | **4.7** Motor de armazenamento | **T22 cap. 4** (estruturas de armazenamento) | **T46** inteira · T37 › Por dentro de um banco · T11 › Árvores de busca |
 | **R3** A memória comparada | — | **T36 › módulos 6 e 7** (inclui o C++) |
