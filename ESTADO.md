@@ -1,8 +1,8 @@
 # Onde paramos
 
-- **Atualizado em:** 22/11/2026
-- **Item atual:** nenhum (o projeto ainda não começou)
-- **Fase:** preparação
+- **Atualizado em:** 23/11/2026
+- **Item atual:** 0.1 · O repositório e o ambiente ([caderno](itens/0.1-o-repositorio-e-o-ambiente.md))
+- **Fase:** estudo. As 6 lições foram geradas na Trilha e avaliadas pela IA (revisoes/2026-11-23-licoes-geradas-item-0.1.md); próximo passo: o Lucas avalia as propostas, ajustamos pelo Ajustar e aprovamos; ele estuda; depois a checagem (incluindo o Git)
 - **Próximo capítulo da faixa:** T23 cap. 1 (ROADMAP §7.3, bloco 1)
 - **Dúvidas abertas:** nenhuma
 
